@@ -1,0 +1,12 @@
+<inc-toolbar withBack="false"></inc-toolbar>
+<ion-content>
+  <ion-toolbar color="primary">
+    <ion-title>{{title | translate}}</ion-title>
+  </ion-toolbar>
+
+  <inc-container>
+    <inc-page-loader [loading]="loading"></inc-page-loader>
+    <inc-err-no-data *ngIf="!loading "></inc-err-no-data>
+  </inc-container>
+
+</ion-content>
