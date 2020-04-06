@@ -8,12 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class ObservationListPage implements OnInit {
   title = 'DASHBOARD';
   loading = true;
+  sleepData;
 
 
   constructor() { }
 
   ngOnInit() {
     this.loading = false;
+    this.sleepData = 1;
   }
 
 }

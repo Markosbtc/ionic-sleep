@@ -6,7 +6,25 @@
 
   <inc-container>
     <inc-page-loader [loading]="loading"></inc-page-loader>
-    <inc-err-no-data *ngIf="!loading "></inc-err-no-data>
+    <inc-err-no-data *ngIf="!loading && !sleepData"></inc-err-no-data>
+
+    <!-- date + chart + details -->
+
+
+    <!-- chart -->
+    <app-sleep-chart></app-sleep-chart>
+    <ion-grid>
+      <ion-row>
+        <ion-col>Avg Sleep</ion-col>
+        <ion-col>Avg Deep Sleep</ion-col>
+        <ion-col>Avg Light Sleep</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>Avg Sleep Start Time</ion-col>
+        <ion-col>Avg Sleep End Time</ion-col>
+      </ion-row>
+    </ion-grid>
+
   </inc-container>
 
 </ion-content>

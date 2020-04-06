@@ -8,6 +8,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ObservationListPage } from './observation-list.page';
 import { ToolbarModule, TranslateModule, IncPageModule } from '@inclouded/ionic4-inclouded-lib';
+import { SleepChartComponent } from './components/sleep-chart/sleep-chart.component';
 
 const routes: Routes = [
   {
@@ -18,7 +19,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-  CommonModule,
+    CommonModule,
     FormsModule,
     IonicModule,
     ToolbarModule,
@@ -26,6 +27,9 @@ const routes: Routes = [
     IncPageModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [ObservationListPage]
+  declarations: [
+    ObservationListPage,
+    SleepChartComponent
+  ]
 })
-export class ObservationListPageModule {}
+export class ObservationListPageModule { }
