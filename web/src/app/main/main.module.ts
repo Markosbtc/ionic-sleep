@@ -15,6 +15,7 @@ const routes: Routes = [
     component: MainPage,
     children: [
       { path: 'observation-list', loadChildren: './../observation-list/observation-list.module#ObservationListPageModule' },
+      { path: 'sleep', loadChildren: './../sleep/sleep.module#SleepPageModule' },
     ],
     // canActivateChild: [AuthGuard]
   },

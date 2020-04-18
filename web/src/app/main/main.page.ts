@@ -8,6 +8,13 @@ export const NAVLIST: NavLink[] = [
     url: '/main/observation-list',
     icon: 'clipboard',
     disabled: false,
+  },
+  {
+    id: 'sleep',
+    label: 'SLEEP',
+    url: '/main/sleep',
+    icon: 'bed',
+    disabled: false,
   }
 
 ];
