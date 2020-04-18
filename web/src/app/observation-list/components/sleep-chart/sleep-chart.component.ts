@@ -11,7 +11,8 @@ export class SleepChartComponent implements OnInit {
 
   private barChart: Chart;
   deepSleepTime = [];
-  shallowSleepTime = [];
+  lightSleepTime = [];
+  timeAwake = [];
   // chartHeightMax = 0;
 
   constructor() { }
@@ -37,11 +38,17 @@ export class SleepChartComponent implements OnInit {
             data: this.deepSleepTime
           },
           {
-            label: 'Shallow Sleep',
+            label: 'Light Sleep',
             backgroundColor: 'rgb(66,140,255)',
             borderColor: 'rgb(66,140,255)',
-            data: this.shallowSleepTime
+            data: this.lightSleepTime
           },
+          {
+            label: 'Time awake',
+            backgroundColor: 'rgb(255, 111, 0)',
+            borderColor: 'rgb(255, 111, 0)',
+            data: this.timeAwake
+          }
         ],
       },
       options: {
@@ -68,6 +75,7 @@ export class SleepChartComponent implements OnInit {
             },
             offset: true,
             ticks: {
+              // display: false,
               padding: 10,
               // labelOffset: 78
             }
@@ -87,7 +95,7 @@ export class SleepChartComponent implements OnInit {
       { x: new Date(new Date().setDate(new Date().getDate() + 5)), y: 2.3 },
       { x: new Date(new Date().setDate(new Date().getDate() + 6)), y: 1 },
     );
-    this.shallowSleepTime.push(
+    this.lightSleepTime.push(
       { x: new Date(), y: 6 },
       { x: new Date(new Date().setDate(new Date().getDate() + 1)), y: 4 },
       { x: new Date(new Date().setDate(new Date().getDate() + 2)), y: 0 },
@@ -95,6 +103,15 @@ export class SleepChartComponent implements OnInit {
       { x: new Date(new Date().setDate(new Date().getDate() + 4)), y: 0 },
       { x: new Date(new Date().setDate(new Date().getDate() + 5)), y: 4 },
       { x: new Date(new Date().setDate(new Date().getDate() + 6)), y: 5 },
+    );
+    this.timeAwake.push(
+      { x: new Date(), y: 1 },
+      { x: new Date(new Date().setDate(new Date().getDate() + 1)), y: 3.2 },
+      { x: new Date(new Date().setDate(new Date().getDate() + 2)), y: 0 },
+      { x: new Date(new Date().setDate(new Date().getDate() + 3)), y: 0.3 },
+      { x: new Date(new Date().setDate(new Date().getDate() + 4)), y: 0 },
+      { x: new Date(new Date().setDate(new Date().getDate() + 5)), y: 3 },
+      { x: new Date(new Date().setDate(new Date().getDate() + 6)), y: 1.6 },
     );
   }
 

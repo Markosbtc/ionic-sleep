@@ -8,22 +8,47 @@
     <inc-page-loader [loading]="loading"></inc-page-loader>
     <inc-err-no-data *ngIf="!loading && !sleepData"></inc-err-no-data>
 
-    <!-- date + chart + details -->
+    <ion-button shape="round" size="small">
+      <
+    </ion-button>
+    <ion-icon name="chevron-back-circle-outline"></ion-icon>
 
-
-    <!-- chart -->
     <app-sleep-chart></app-sleep-chart>
-    <ion-grid>
-      <ion-row>
-        <ion-col>Avg Sleep</ion-col>
-        <ion-col>Avg Deep Sleep</ion-col>
-        <ion-col>Avg Light Sleep</ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>Avg Sleep Start Time</ion-col>
-        <ion-col>Avg Sleep End Time</ion-col>
-      </ion-row>
-    </ion-grid>
+
+    <ion-card class="ion-margin-top">
+      <ion-card-content>
+        <ion-grid class="ion-text-center">
+          <ion-row>
+            <ion-col>
+              <ion-label> Avg Sleep </ion-label><br>
+              <ion-text color="primary"> 6h36min </ion-text>
+            </ion-col>
+            <ion-col>
+              <ion-label>Avg Deep Sleep</ion-label><br>
+              <ion-text color="primary"> 6h36min </ion-text>
+            </ion-col>
+            <ion-col>
+              <ion-label>Avg Light Sleep</ion-label><br>
+              <ion-text color="primary"> 6h36min </ion-text>
+            </ion-col>
+          </ion-row>
+          <ion-row class="ion-margin-top">
+            <ion-col>
+              <ion-label>Avg Sleep Start Time</ion-label><br>
+              <ion-text color="primary"> 6h36min </ion-text>
+            </ion-col>
+            <ion-col>
+              <ion-label>Avg Sleep End Time</ion-label><br>
+              <ion-text color="primary"> 6h36min </ion-text>
+            </ion-col>
+            <ion-col>
+              <ion-label>Avg Avake hours</ion-label><br>
+              <ion-text color="primary"> 6h36min </ion-text>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
 
   </inc-container>
 
