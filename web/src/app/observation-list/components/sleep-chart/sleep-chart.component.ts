@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef, Input } from '@angular/core';
 import { Chart } from 'chart.js';
+import { IObservation } from '@ahryman40k/ts-fhir-types/lib/R4';
 
 @Component({
   selector: 'app-sleep-chart',
@@ -8,6 +9,7 @@ import { Chart } from 'chart.js';
 })
 export class SleepChartComponent implements OnInit {
   @ViewChild('barCanvas') barCanvas: ElementRef;
+  @Input() sleepChartData: IObservation[];
 
   private barChart: Chart;
   deepSleepTime = [];
@@ -18,7 +20,7 @@ export class SleepChartComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.exampleFill();
+    this.extractData();
     this.createChart();
   }
 
@@ -57,6 +59,13 @@ export class SleepChartComponent implements OnInit {
             ticks: {
               beginAtZero: true,
               // max: this.chartHeightMax
+              callback(value, index, values) {
+                if (index === values.length - 1) {
+                  return value;
+                } else {
+                  return '';
+                }
+              }
             },
             stacked: true
           }],
@@ -80,11 +89,55 @@ export class SleepChartComponent implements OnInit {
               // labelOffset: 78
             }
           }]
+        },
+        tooltips: {
+          callbacks: {
+            label(tooltipItem, data) {
+              let label = data.datasets[tooltipItem.datasetIndex].label || '';
+              if (label) {
+                label += ': ';
+              }
+              const h = Math.floor(tooltipItem.yLabel / 60);
+              const m = tooltipItem.yLabel % 60;
+              const minutes = m < 10 ? '0' + m : m;
+              if (h > 0) {
+                label += h + 'h ' + minutes + 'min';
+              } else {
+                label += minutes + 'min';
+              }
+              return label;
+            },
+            title(tooltipItem, data) {
+              const title = tooltipItem[0].xLabel;
+              return title.split(',').splice(0, 2).toString();
+            }
+          }
         }
       }
     });
   }
 
+  extractData() {
+    this.sleepChartData.forEach(e => {
+      this.lightSleepTime.push(
+        {
+          x: new Date(e.effectiveDateTime),
+          y: e.component[0].valueQuantity.value
+        });
+      this.deepSleepTime.push(
+        {
+          x: new Date(e.effectiveDateTime),
+          y: e.component[1].valueQuantity.value
+        });
+      this.timeAwake.push(
+        {
+          x: new Date(e.effectiveDateTime),
+          y: e.component[2].valueQuantity.value
+        });
+    });
+  }
+
+  // demo data
   exampleFill() {
     this.deepSleepTime.push(
       { x: new Date(), y: 2 },

@@ -1,88 +1,107 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { IObservation } from '@ahryman40k/ts-fhir-types/lib/R4';
+import { SleepObservationService } from './../shared/services/sleep-observation.service';
 
 @Component({
   selector: 'app-observation-list',
   templateUrl: './observation-list.page.html',
   styleUrls: ['./observation-list.page.scss'],
 })
-export class ObservationListPage implements OnInit {
+export class ObservationListPage implements OnInit, OnDestroy {
   title = 'DASHBOARD';
   loading = true;
-  sleepData;
 
+  getSleepSub: Subscription;
+  sleepData: IObservation[];
 
-  constructor() { }
+  sleepTableDetails = [];
+
+  constructor(private sleepObservationService: SleepObservationService) { }
+
+  ngOnDestroy() {
+    if (this.getSleepSub) {
+      this.getSleepSub.unsubscribe();
+    }
+  }
 
   ngOnInit() {
-    this.loading = false;
-    this.sleepData = 1;
+    this.getSleepingData();
   }
 
-// -----------------------------------------------------------------
-  createNewTypeBloodPressureObservation(patientId: string) {
-    return {
-      code: {
-        coding: [{
-          code: '55284-4', display:
-            'Blood pressure systolic & diastolic',
-          system: 'http://loinc.org'
-        }]
-      },
-      component: [{
-        code: {
-          coding: [{
-            code: '8480-6',
-            display: 'Intravascular systolic',
-            system: 'http://loinc.org'
-          }]
-        },
-        referenceRange: [{
-          high: { value: 169.58359734249157 },
-          low: { value: 99.46321957968875 }
-        }],
-        valueQuantity: { unit: 'Hgmm', value: 174.12896493983556 }
-      },
-      {
-        code: {
-          coding: [{
-            code: '8462-4',
-            display: 'Intravascular diastolic',
-            system: 'http://loinc.org'
-          }]
-        },
-        referenceRange: [{
-          high: { value: 104.00292431609599 },
-          low: { value: 57.634236322073505 }
-        }],
-        valueQuantity: { unit: 'Hgmm', value: 90.9834217665475 }
-      },
-      {
-        code: {
-          coding: [{
-            code: '8867-4', display: 'Heart rate',
-            system: 'http://loinc.org'
-          }]
-        },
-        referenceRange: [{
-          high: { value: 113.61567044408287 },
-          low: { value: 49.97044751353194 }
-        }],
-        valueQuantity: { unit: 'bpm', value: 95.49941392361909 }
-      }],
-      effectiveDateTime: '2019-11-10T13:00:00',
-      meta: {
-        lastUpdated: '2019-12-06T15:10:04.152738'
-      },
-      performer: [{
-        reference: patientId
-      }],
-      resourceType: 'Observation',
-      status: 'final',
-      subject:
-        { reference: patientId }
-    };
+  getSleepingData() {
+    // for the past 7 days
+    this.loading = true;
+    const to = new Date();
+    const from = new Date(new Date(new Date().setDate(new Date().getDate() - 6)).setHours(0, 0, 0, 0));
+    this.getSleepSub = this.sleepObservationService.getAllByDateInterval(from, to)
+      .subscribe((getSleepingRes: IObservation[]) => {
+        if (getSleepingRes.length > 0) {
+          this.sleepData = getSleepingRes;
+          this.loading = false;
+          this.calculateAvgs();
+        } else {
+          console.error('no activity observation');
+          this.loading = false;
+        }
+      }, error => {
+        console.error('error at getObservation: ', error);
+        this.loading = false;
+      });
   }
 
+  calculateAvgs() {
+    const lightSleeps = [];
+    const deepSleeps = [];
+    const awakes = [];
+    const sleepStarts = [];
+    const sleepEnds = [];
+
+    this.sleepData.forEach(e => {
+      lightSleeps.push(e.component[0].valueQuantity.value);
+      deepSleeps.push(e.component[1].valueQuantity.value);
+      awakes.push(e.component[2].valueQuantity.value);
+    });
+
+    const avgLightSleep = this.avg(lightSleeps);
+    const avgDeepSleep = this.avg(deepSleeps);
+    const avgAwake = this.avg(awakes);
+    const avgSleep = avgLightSleep + avgDeepSleep;
+    const avgSleepStart = 0;
+    const avgSleepEnd = 0;
+
+    this.sleepTableDetails = [[
+      {
+        label: 'Avg Sleep',
+        data: avgSleep
+      },
+      {
+        label: 'Avg Deep Sleep',
+        data: avgDeepSleep
+      },
+      {
+        label: 'Avg Light Sleep',
+        data: avgLightSleep
+      }
+    ], [
+      {
+        label: 'Avg Sleep Start Time',
+        data: avgSleepStart
+      },
+      {
+        label: 'Avg Sleep End Time',
+        data: avgSleepEnd
+      },
+      {
+        label: 'Avg Avake hours',
+        data: avgAwake
+      }
+    ]];
+  }
+
+  avg(arr) {
+    return Math.floor(arr.reduce((a, b) => a + parseInt(b, 10), 0) / arr.length) || 0;
+  }
 
 }
 

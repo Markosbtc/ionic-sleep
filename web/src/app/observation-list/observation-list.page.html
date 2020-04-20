@@ -8,47 +8,23 @@
     <inc-page-loader [loading]="loading"></inc-page-loader>
     <inc-err-no-data *ngIf="!loading && !sleepData"></inc-err-no-data>
 
-    <ion-button shape="round" size="small">
-      <
-    </ion-button>
-    <ion-icon name="chevron-back-circle-outline"></ion-icon>
+    <ng-container *ngIf="!loading && sleepData">
+      <app-sleep-chart [sleepChartData]="sleepData" ></app-sleep-chart>
 
-    <app-sleep-chart></app-sleep-chart>
+      <ion-card *ngIf="sleepTableDetails" class="ion-margin-top">
+        <ion-card-content>
+          <ion-grid class="ion-text-center">
+            <ion-row *ngFor="let row of sleepTableDetails; let i = index">
+              <ion-col *ngFor="let sleepStat of sleepTableDetails[i]">
+                <ion-label> {{ sleepStat.label }} </ion-label><br>
+                <ion-text color="primary"> {{ sleepStat.data | minuteToHour }} </ion-text>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
 
-    <ion-card class="ion-margin-top">
-      <ion-card-content>
-        <ion-grid class="ion-text-center">
-          <ion-row>
-            <ion-col>
-              <ion-label> Avg Sleep </ion-label><br>
-              <ion-text color="primary"> 6h36min </ion-text>
-            </ion-col>
-            <ion-col>
-              <ion-label>Avg Deep Sleep</ion-label><br>
-              <ion-text color="primary"> 6h36min </ion-text>
-            </ion-col>
-            <ion-col>
-              <ion-label>Avg Light Sleep</ion-label><br>
-              <ion-text color="primary"> 6h36min </ion-text>
-            </ion-col>
-          </ion-row>
-          <ion-row class="ion-margin-top">
-            <ion-col>
-              <ion-label>Avg Sleep Start Time</ion-label><br>
-              <ion-text color="primary"> 6h36min </ion-text>
-            </ion-col>
-            <ion-col>
-              <ion-label>Avg Sleep End Time</ion-label><br>
-              <ion-text color="primary"> 6h36min </ion-text>
-            </ion-col>
-            <ion-col>
-              <ion-label>Avg Avake hours</ion-label><br>
-              <ion-text color="primary"> 6h36min </ion-text>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-card-content>
-    </ion-card>
+    </ng-container>
 
   </inc-container>
 

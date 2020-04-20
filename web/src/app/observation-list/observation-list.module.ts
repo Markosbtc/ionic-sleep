@@ -9,6 +9,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ObservationListPage } from './observation-list.page';
 import { ToolbarModule, TranslateModule, IncPageModule } from '@inclouded/ionic4-inclouded-lib';
 import { SleepChartComponent } from './components/sleep-chart/sleep-chart.component';
+import { PipesModule } from './../shared/pipes/pipes.module';
 
 const routes: Routes = [
   {
@@ -25,6 +26,7 @@ const routes: Routes = [
     ToolbarModule,
     TranslateModule,
     IncPageModule,
+    PipesModule,
     RouterModule.forChild(routes)
   ],
   declarations: [

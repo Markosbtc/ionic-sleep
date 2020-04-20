@@ -3,9 +3,30 @@
   <ion-toolbar color="primary">
     <ion-title>{{title | translate}}</ion-title>
   </ion-toolbar>
-
   <inc-container>
+
+    <form [formGroup]="sleepForm" (ngSubmit)="synchronization()">
+      <ion-item *ngFor="let sleepInput of sleepInputs">
+        <ion-label position="floating">{{sleepInput.text}}
+          <span class="required">*</span>
+        </ion-label>
+        <ion-input type="{{sleepInput.type}}" clearInput formControlName="{{sleepInput.formControlName}}">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Mérés időpontja
+          <span class="required">*</span>
+        </ion-label>
+        <ion-datetime formControlName="date" displayFormat="YYYY MM D HH:mm"></ion-datetime>
+      </ion-item>
+
+      <ion-button expand="full" shape="round" fill="outline" color="secondary" (click)="resetSleepForm()">Mégsem
+      </ion-button>
+      <ion-button expand="full" shape="round" color="secondary" type="submit" [disabled]="sleepForm.invalid">
+        Feltöltés
+      </ion-button>
+    </form>
     
   </inc-container>
-
 </ion-content>
