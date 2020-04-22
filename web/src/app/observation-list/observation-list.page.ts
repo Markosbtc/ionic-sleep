@@ -93,7 +93,7 @@ export class ObservationListPage implements OnInit, OnDestroy {
         data: avgSleepEnd
       },
       {
-        label: 'Avg Avake hours',
+        label: 'Avg Awake hours',
         data: avgAwake
       }
     ]];

@@ -3,7 +3,8 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ObservationConstants } from '@inclouded/fhir-observation';
 import { SleepObservationService } from './../shared/services/sleep-observation.service';
 import { IObservation } from '@ahryman40k/ts-fhir-types/lib/R4';
-import { LoadingController, ToastController } from '@ionic/angular';
+import { LoadingController } from '@ionic/angular';
+import { ToastService } from '@inclouded/ionic4-inclouded-lib';
 
 
 export const SLEEP_INPUTS = [
@@ -42,7 +43,7 @@ export class SleepPage implements OnInit {
   constructor(
     private sleepObservationService: SleepObservationService,
     private loadingController: LoadingController,
-    private toastCtrl: ToastController,
+    private toastService: ToastService
   ) { }
 
   ngOnInit() {
@@ -78,9 +79,9 @@ export class SleepPage implements OnInit {
     });
     loading.onDidDismiss().then((data: any) => {
       if (data.data) {
-        this.presentToast('Sikeres feltöltés az adatbázisba');
+        this.toastService.presentToast('Sikeres feltöltés az adatbázisba');
       } else {
-        this.presentToast('Sikertelen feltöltés az adatbázisba');
+        this.toastService.presentToast('Sikertelen feltöltés az adatbázisba');
       }
       this.resetSleepForm();
     });
@@ -92,13 +93,13 @@ export class SleepPage implements OnInit {
       console.log('sikeres feltöltés: ', res);
     }).catch((error: any) => {
       console.error('add sleep error: ', error);
-      this.presentToast('HIBA feltöltésnél');
+      this.toastService.presentToast('HIBA feltöltésnél');
       returnValue = false;
     });
     return returnValue;
   }
 
-  createSleepingObservation(patientId: string, date: Date, light, deep, wake?, rem?): IObservation {
+  createSleepingObservation(patientId: string, date: Date, light: number, deep: number, wake?: number, rem?: number): IObservation {
     return {
       basedOn: [{ reference: null }],
       subject: { reference: patientId },
@@ -168,14 +169,6 @@ export class SleepPage implements OnInit {
         }
       }]
     } as IObservation;
-  }
-
-  async presentToast(message) {
-    const toast = this.toastCtrl.create({
-      message,
-      duration: 3000
-    });
-    (await toast).present();
   }
 
 }

@@ -67,7 +67,10 @@ export class SleepChartComponent implements OnInit {
                 }
               }
             },
-            stacked: true
+            stacked: true,
+            gridLines: {
+              drawTicks: false,
+            },
           }],
           xAxes: [{
             stacked: true,
@@ -86,7 +89,6 @@ export class SleepChartComponent implements OnInit {
             ticks: {
               // display: false,
               padding: 10,
-              // labelOffset: 78
             }
           }]
         },
@@ -115,6 +117,16 @@ export class SleepChartComponent implements OnInit {
         }
       }
     });
+
+    this.positionXLabel(this.barChart);
+  }
+
+  positionXLabel(chart) {
+    const xScale = chart.scales['x-axis-0'];
+    const xLabelOffset = (xScale.getPixelForTick(1) - xScale.getPixelForTick(0)) / 2;
+    chart.options.scales.xAxes[0].ticks.labelOffset = xLabelOffset;
+
+    chart.update();
   }
 
   extractData() {
