@@ -1,0 +1,7 @@
+<inc-modal-header label="{{title | translate}}"></inc-modal-header>
+<ion-content class="ion-padding">
+    <inc-taked-medication-add [patient]="patient" [user]="user" [inData]="inData" [extraData]="extraData"
+        [dosagePeriods]="dosagePeriods" [days]="days" [doseUnit]="doseUnit"
+        (callMedicationSave)="onCallMedicationSave($event)" (callDelete)="onCallDelete($event)">
+    </inc-taked-medication-add>
+</ion-content>

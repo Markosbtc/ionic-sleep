@@ -1,0 +1,17 @@
+<inc-toolbar defHref="/main/patient-list"></inc-toolbar>
+
+<ion-content>
+  <ion-toolbar color="primary">
+    <ion-title>{{title | translate}}</ion-title>
+  </ion-toolbar>
+  <inc-container>
+    <ion-card no-margin>
+      <ion-text color="primary" text-uppercase padding style="padding-bottom: 0;">
+        <b>{{'MASTER_DATAS' | translate}}</b>
+      </ion-text>
+      <inc-patient-add [inData]="patientForUpdate" [extraValidators]="extraValidators"
+        [modalParameters]="modalParameters" (callUpdate)='update($event)' (callSave)='save($event)'>
+      </inc-patient-add>
+    </ion-card>
+  </inc-container>
+</ion-content>

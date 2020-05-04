@@ -1,0 +1,45 @@
+<inc-title-btn title="DECOURSE" btnTxt="DECOURSE" (callClick)="openModal('decourse')"></inc-title-btn>
+<ion-card class="ion-no-margin ion-no-padding">
+  <ion-card-content>
+    <mat-tab-group mat-align-tabs="center" dynamicHeight="true" (selectedTabChange)="onTabChange($event)">
+      <mat-tab id="closed-alerts">
+        <ng-template mat-tab-label>
+          <span class="ion-text-capitalize">{{'CLOSED_ALERTS'| translate}}</span>
+        </ng-template>
+        <ng-template matTabContent>
+          <inc-page-loader [loading]="loading"></inc-page-loader>
+          <div *ngIf="decourses.length === 0">
+            <br>
+            <inc-err-no-data *ngIf="decourses.length === 0 && !loading" subjectName="{{'DECOURSE' | translate}}"
+              noDesc="true">
+            </inc-err-no-data>
+          </div>
+          <inc-container>
+            <inc-decourse-details *ngIf="decourses.length > 0" [inData]="decourses"
+              (callMore)="onCallMore('decourse', $event)">
+            </inc-decourse-details>
+          </inc-container>
+        </ng-template>
+      </mat-tab>
+      <mat-tab id="other-comments">
+        <ng-template mat-tab-label>
+          <span class="ion-text-capitalize">{{'OTHER_COMMENTS'| translate}}</span>
+        </ng-template>
+        <ng-template matTabContent>
+          <inc-page-loader [loading]="loading"></inc-page-loader>
+          <div *ngIf="decourses.length === 0">
+            <br>
+            <inc-err-no-data *ngIf="decourses.length === 0 && !loading" subjectName="{{'DECOURSE' | translate}}"
+              noDesc="true">
+            </inc-err-no-data>
+          </div>
+          <inc-container>
+            <inc-decourse-details *ngIf="decourses.length > 0" [inData]="decourses"
+              (callMore)="onCallMore('decourse', $event)">
+            </inc-decourse-details>
+          </inc-container>
+        </ng-template>
+      </mat-tab>
+    </mat-tab-group>
+  </ion-card-content>
+</ion-card>

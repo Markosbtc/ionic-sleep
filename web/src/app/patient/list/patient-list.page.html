@@ -1,0 +1,40 @@
+<inc-toolbar withBack="false"></inc-toolbar>
+<ion-content>
+  <ion-toolbar>
+    <ion-title>{{'PATIENT_LIST' | translate}}</ion-title>
+  </ion-toolbar>
+  <inc-container>
+    <inc-page-loader [loading]="loading"></inc-page-loader>
+    <inc-err-no-data *ngIf="!patientList && !loading"></inc-err-no-data>
+    <ion-grid *ngIf="!loading && patientList">
+      <ion-row>
+        <ion-col size="12" size-md="3" offset-md="9">
+          <ion-button routerLink="/patient-add" expand="full" color="secondary" id="patientAddButton">
+            <ion-icon name="add"></ion-icon>
+            &nbsp;{{'ADD_PATIENT' | translate}}
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-align-items-center">
+        <ion-col size="9" size-md="6">
+          <inc-patient-search (callSearch)="onCallSearch($event)"></inc-patient-search>
+        </ion-col>
+        <ion-col size="3" offset-md="4.5" size-md="1.5">
+          <inc-patient-order (callSearch)="onCallOrder($event)"></inc-patient-order>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <inc-err-no-data subjectName="{{'PATIENT' | translate}}"
+      *ngIf="patientList && patientList.length===0 && !loading && !filtered">
+    </inc-err-no-data>
+    <ion-card *ngIf="patientList && patientList.length === 0 && !loading && filtered" class="ion-no-margin nomatch">
+      <ion-text color="danger" style="text-align: center;">
+        <h4>{{'NO_RESULT' | translate}}</h4>
+      </ion-text>
+    </ion-card>
+    <div *ngIf="!loading && patientList && patientList.length > 0">
+      <inc-patient-list [patientList]="patientList"></inc-patient-list>
+    </div>
+  </inc-container>
+</ion-content>

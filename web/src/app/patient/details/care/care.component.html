@@ -1,0 +1,31 @@
+<inc-title-btn title="BASIC_THERAPY_PLAN"></inc-title-btn>
+<ion-card class="ion-padding" *ngIf="generalCarePlanLoaded">
+  <inc-general-care-plan [inData]="generalCarePlan" [patient]="patient" [user]="user"
+    (callSave)="onCallSave('generalCarePlan',$event)" (callUpdate)="onCallUpdate('generalCarePlan', $event)">
+  </inc-general-care-plan>
+</ion-card>
+<inc-title-btn title="THERAPY_PLANS" btnTxt="THERAPY" (callClick)="openModal('careplan')"></inc-title-btn>
+<ion-segment mode="ios" value="draft" *ngIf="careplans && careplans.length > 0">
+  <ion-segment-button mode="ios" value="active" disabled>
+    <ion-label>{{'ACTIVE' | translate}}</ion-label>
+  </ion-segment-button>
+  <ion-segment-button mode="ios" value="draft">
+    <ion-label>{{'PLANNED' | translate}}</ion-label>
+  </ion-segment-button>
+  <ion-segment-button mode="ios" disabled>
+    <ion-label>{{'CLOSED' | translate}}</ion-label>
+  </ion-segment-button>
+</ion-segment>
+<ion-card *ngFor="let careplan of careplans">
+  <inc-care-plan-details [inData]="careplan" [goals]="careplan.goal" [alerts]="careplan.supportingInfo"
+    (callMore)="onCallMore('careplan', $event)" (callAdd)="onCallAdd($event, careplan)"
+    (callDelete)="onCallModalDelete($event, careplan)" (callUpdate)="onCallUpdate2($event, careplan)">
+  </inc-care-plan-details>
+</ion-card>
+<inc-title-btn title="MEDICATION_THERAPIES" btnTxt="ADD_MEDICATION2" (callClick)="openModal('medreq')"></inc-title-btn>
+<ion-card *ngFor="let medreq of medreqs">
+  <inc-medication-request-details [units]="units" [periods]="periods" [days]="days" [inData]="medreq"
+    (callSave)="onDoseSave($event, medreq)" (callUpdate)="onDoseUpdate($event, medreq)"
+    (callMore)="onCallMore('medreq', $event)">
+  </inc-medication-request-details>
+</ion-card>

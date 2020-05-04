@@ -1,0 +1,62 @@
+<inc-title-btn title="SPECIFIC_DATAS"></inc-title-btn>
+<ion-card class="ion-padding">
+  <inc-page-loader [loading]="getLastMeasurementLoading"></inc-page-loader>
+  <ion-card-header>
+    {{'MEDICAL_RECORD_HEADER' | translate}}
+  </ion-card-header>
+  <ion-card-content *ngIf="!getLastMeasurementLoading">
+    <app-specific-datas [patient]="patient" [user]="user" [inData]="lastMeasurement"></app-specific-datas>
+  </ion-card-content>
+</ion-card>
+
+<inc-title-btn title="CRITICAL_DATAS"></inc-title-btn>
+<ion-card class="ion-padding">
+  <ion-grid>
+    <ion-row class="ion-align-items-end">
+      <ion-col size="12" size-md="6" *ngIf="bloodTypeLoaded">
+        <inc-bloodtype-add [patient]="patient" [user]="user" [obs]="bloodType"
+          (callSave)="onCallSave('bloodType', $event)" (callUpdate)="onCallUpdate('bloodType', $event)">
+        </inc-bloodtype-add>
+      </ion-col>
+      <ion-col size="12" size-md="6" *ngIf="allergyIntoleranceLoaded">
+        <inc-allergy-add [inData]="allergyIntolerances" [patient]="patient"
+          (callSave)="onCallSave('allergyIntolerance', $event)"
+          (callDelete)="openDeleteAlert('allergyIntolerance', $event)">
+        </inc-allergy-add>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card>
+
+<!-- <inc-title-btn title="MEDICATIONS" btnTxt="MEDICINE" (callClick)="openModal('medicationStatement')"></inc-title-btn>
+<ion-card *ngFor="let medicationStatement of medicationStatements" id="medication-card">
+  <inc-medication-details [inData]="medicationStatement" (callMore)="onCallMore('medicationStatement', $event)">
+  </inc-medication-details>
+</ion-card> -->
+
+<inc-title-btn title="TAKED_MEDICATIONS" btnTxt="MEDICINE" (callClick)="openModal('takedMedication')">
+</inc-title-btn>
+<ion-card *ngFor="let takedMedication of takedMedications">
+  <inc-taked-medication-details [inData]="takedMedication" (callMore)="onCallMore('takedMedication', $event)">
+  </inc-taked-medication-details>
+
+  <inc-title-btn title="VISITS" btnTxt="VISIT" (callClick)="openModal('appointment')"></inc-title-btn>
+  <ion-card *ngIf="appointments && appointments.length" class="ion-padding" id="appointment-card">
+    <mat-tab-group>
+      <mat-tab *ngFor="let appointment of appointments"
+        label="{{appointment.requestedPeriod[0].start | date:'yyyy.MM.dd'}}">
+        <inc-appointment-details [inData]="appointment" (callMore)="onCallMore('appointment', $event)">
+        </inc-appointment-details>
+      </mat-tab>
+    </mat-tab-group>
+  </ion-card>
+
+  <inc-title-btn title="ANAMNESISES" btnTxt="ANAMNESIS" (callClick)="openModal('condition')"></inc-title-btn>
+  <ion-card *ngIf="conditions && conditions.length" class="ion-padding" id="condition-card">
+    <mat-tab-group>
+      <mat-tab *ngFor="let condition of conditions" label="{{condition.onsetDateTime | date:'yyyy.MM.dd'}}">
+        <inc-condition-details [inData]="condition" (callMore)="onCallMore('condition', $event)">
+        </inc-condition-details>
+      </mat-tab>
+    </mat-tab-group>
+  </ion-card>

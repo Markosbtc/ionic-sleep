@@ -41,7 +41,7 @@ export class ObservationListPage implements OnInit, OnDestroy {
           this.loading = false;
           this.calculateAvgs();
         } else {
-          console.error('no activity observation');
+          console.error('no sleeping observation');
           this.loading = false;
         }
       }, error => {
@@ -72,28 +72,28 @@ export class ObservationListPage implements OnInit, OnDestroy {
 
     this.sleepTableDetails = [[
       {
-        label: 'Avg Sleep',
+        label: 'AVG_SLEEP',
         data: avgSleep
       },
       {
-        label: 'Avg Deep Sleep',
+        label: 'AVG_DEEP_SLEEP',
         data: avgDeepSleep
       },
       {
-        label: 'Avg Light Sleep',
+        label: 'AVG_LIGHT_SLEEP',
         data: avgLightSleep
       }
     ], [
       {
-        label: 'Avg Sleep Start Time',
+        label: 'AVG_SLEEP_START',
         data: avgSleepStart
       },
       {
-        label: 'Avg Sleep End Time',
+        label: 'AVG_SLEEP_END',
         data: avgSleepEnd
       },
       {
-        label: 'Avg Awake hours',
+        label: 'AVG_AWAKE_SLEEP',
         data: avgAwake
       }
     ]];

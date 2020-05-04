@@ -1,0 +1,31 @@
+<inc-toolbar defHref="/main/device-list"></inc-toolbar>
+<ion-content>
+  <ion-toolbar color="primary">
+    <ion-title>{{'DEVICE_DETAILS' | translate}}
+      <ion-chip color="light" outline="true" style="border-radius: 0;" *ngIf="device">
+        <ion-label>{{device.identifier[0].value}}</ion-label>
+      </ion-chip>
+    </ion-title>
+  </ion-toolbar>
+  <inc-container>
+    <ion-card class="ion-no-margin ion-margin-bottom">
+      <ion-text color="primary" class="ion-text-uppercase ion-padding" style="padding-bottom: 0;">
+        <b>{{'DEVICE' | translate}}</b>
+      </ion-text>
+      <inc-device-details (callDelete)="onCallDelete($event)"></inc-device-details>
+    </ion-card>
+    <ion-card class="ion-padding ion-no-margin ion-margin-bottom" *ngIf="device">
+      <ion-text color="primary" class="ion-text-uppercase">
+        <b>{{'STATUS' | translate}}</b>
+      </ion-text>
+      <inc-device-status (callUpdate)="onCallUpdate($event)" [device]="device"></inc-device-status>
+    </ion-card>
+    <ion-card class="ion-no-margin ion-margin-bottom mat-elevation-z6"
+      *ngIf="provList && provList.data && provList.data.length > 0">
+      <ion-text color="primary" class="ion-text-uppercase ion-padding" style="padding-bottom: 0;">
+        <b>{{'HISTORY_BUTTON' | translate}}</b>
+      </ion-text>
+      <inc-device-status-table [list]="provList"></inc-device-status-table>
+    </ion-card>
+  </inc-container>
+</ion-content>

@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  version: '1.0.1',
   firebase: {
     apiKey: 'AIzaSyBzHuQF4Txjai6VpaMQVhH1gjgoBOTKt1w',
     authDomain: 'ionic-sleep.firebaseapp.com',

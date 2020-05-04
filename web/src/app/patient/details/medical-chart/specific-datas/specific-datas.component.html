@@ -1,0 +1,52 @@
+<form [formGroup]="form">
+  <ion-grid>
+    <ion-row class="ion-align-items-end">
+      <ion-col size="12" size-md="6">
+        <ion-label style="font-weight: bold;">
+          {{'HEIGHT'| translate}}:
+        </ion-label>
+        {{otherDatas.body.height}}
+      </ion-col>
+      <ion-col size="12" size-md="6">
+        <ion-label style="font-weight: bold;">
+          {{'WEIGHT' | translate}}:
+        </ion-label>
+        {{otherDatas.body.weight}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" size-md="6">
+        <ion-label style="font-weight: bold;">
+          {{'PREDICTION_ALGORYTHM' | translate}}:
+        </ion-label>
+        {{otherDatas.PredictionAlgorythm}}
+      </ion-col>
+      <ion-col size="12" size-md="6">
+        <ion-label style="font-weight: bold;">
+          {{'ETHNICITY' | translate}}:
+        </ion-label>
+        {{otherDatas.ethnicity | translate}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="2" style="margin: auto">
+        <ion-label style="font-weight: bold;">
+          {{'GINA_SCORE' | translate}}:
+        </ion-label>
+      </ion-col>
+      <ion-col size="10">
+        <ion-item style="width: 100px;">
+          <ion-input #ginaInput id="gina-input" spiroGinaController type="text" formControlName="ginaScore"
+            (ionChange)="form.valid && oldGina ? update(form.controls.ginaScore.value) : add(form.controls.ginaScore.value)">
+          </ion-input>
+          <div *ngIf="ginaLoading">
+            <ion-spinner></ion-spinner>
+          </div>
+          <div *ngIf="form.valid && showAfterStatus" [ngClass]="{ success: form.valid, danger: form.invalid }">
+            <ion-icon name="checkmark"> </ion-icon>
+          </div>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</form>

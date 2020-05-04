@@ -15,7 +15,21 @@ export const NAVLIST: NavLink[] = [
     url: '/main/sleep',
     icon: 'bed',
     disabled: false,
-  }
+  },
+  {
+    id: 'patient-list',
+    label: 'PATIENT_LIST',
+    url: '/main/patient-list',
+    icon: 'people',
+    disabled: false,
+},
+{
+    id: 'device-list',
+    label: 'DEVICES',
+    url: '/main/device-list',
+    icon: 'phone-portrait',
+    disabled: false,
+}
 
 ];
 

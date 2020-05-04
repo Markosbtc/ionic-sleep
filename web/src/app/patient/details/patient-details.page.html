@@ -1,0 +1,57 @@
+<inc-toolbar defHref="/home/patient-list"></inc-toolbar>
+
+<ion-content>
+  <ion-toolbar color="primary">
+    <ion-title>{{title | translate}}
+      <ion-chip color="light" outline="true" style="border-radius: 0;" *ngIf="patient">
+        <ion-label>{{patient.name[0].text}} -
+          {{patient.identifier[0].value}}</ion-label>
+      </ion-chip>
+    </ion-title>
+  </ion-toolbar>
+  <mat-tab-group mat-align-tabs="center" class="pat-details-tabs" dynamicHeight="true">
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <span class="ion-text-capitalize" id="patient-detection-page">{{'DETECTION_PAGE'| translate}}</span>
+      </ng-template>
+      <ng-template matTabContent>
+        <inc-container>
+          <app-detection-page [patient]="patient"  [user]="user"></app-detection-page>
+        </inc-container>
+      </ng-template>
+    </mat-tab>
+
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <span class="ion-text-capitalize" id="patient-medical-chart">{{'MEDICAL_CHART'| translate}}</span>
+      </ng-template>
+      <ng-template matTabContent>
+        <inc-container>
+          <app-medical-chart [patient]="patient" [user]="user"></app-medical-chart>
+        </inc-container>
+      </ng-template>
+    </mat-tab>
+
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <span class="ion-text-capitalize" id="patient-therapy-plan">{{'CARING'| translate}}</span>
+      </ng-template>
+      <ng-template matTabContent>
+        <inc-container>
+          <app-care [patient]="patient" [user]="user"></app-care><br>
+        </inc-container>
+      </ng-template>
+    </mat-tab>
+
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <span class="ion-text-capitalize"  id="patient-personal-data">{{'MASTER_DATAS'| translate}}</span>
+      </ng-template>
+      <ng-template matTabContent>
+        <inc-container>
+          <inc-patient-base [inData]="patient" expanded showMore="true"></inc-patient-base><br>
+        </inc-container>
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
+</ion-content>

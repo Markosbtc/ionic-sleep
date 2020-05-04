@@ -1,0 +1,27 @@
+<inc-page-loader [loading]="loading"></inc-page-loader>
+
+<inc-container>
+    <inc-err-no-data subjectName="{{errNoDataMsg}}" noDesc="true" *ngIf="!loading && !sleepData"></inc-err-no-data>
+
+    <ng-container *ngIf="!loading && sleepData">
+        <app-sleep-chart [sleepChartData]="sleepData"></app-sleep-chart>
+
+        <ion-card *ngIf="sleepTableDetails" class="ion-margin-top">
+            <ion-card-content>
+                <ion-grid class="ion-text-center">
+                    <ion-row *ngFor="let row of sleepTableDetails; let i = index">
+                        <ion-col *ngFor="let sleepStat of sleepTableDetails[i]">
+                            <ion-label> {{ sleepStat.label | translate }} </ion-label><br>
+                            <ion-text color="primary"> {{ sleepStat.data | minuteToHour }} </ion-text>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-card-content>
+        </ion-card>
+
+    </ng-container>
+
+    <br>
+    <app-decourse [patient]="patient" [user]="user"></app-decourse>
+    <br>
+</inc-container>

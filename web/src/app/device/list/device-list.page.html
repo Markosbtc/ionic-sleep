@@ -1,0 +1,27 @@
+<inc-toolbar withBack="false"></inc-toolbar>
+<ion-content>
+    <ion-toolbar color="primary">
+        <ion-title>{{'DEVICES' | translate}}</ion-title>
+    </ion-toolbar>
+    <inc-container>
+        <inc-page-loader [loading]="loading"></inc-page-loader>
+        <inc-err-no-data *ngIf="!deviceList && !loading"></inc-err-no-data>
+        <ion-grid class="ion-no-padding" *ngIf="!loading && deviceList">
+            <ion-row>
+                <ion-col size="12" size-md="3" offset-md="9">
+                    <ion-button  id="add-button" routerLink="/device-add" expand="full" color="secondary">
+                        <ion-icon name="add"></ion-icon>
+                        &nbsp;{{'ADD_DEVICE_BUTTON' | translate}}
+                    </ion-button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+        <inc-err-no-data subjectName="{{'DEVICE' | translate}}" *ngIf="deviceList && deviceList.length===0 && !loading">
+        </inc-err-no-data>
+        <span *ngIf="!loading && deviceList && deviceList.length > 0">
+            <inc-device-table [deviceList]="deviceList" (callDelete)="onCallDelete($event)"
+                (callSortSizeChanged)="onSizeSortChange($event)">
+            </inc-device-table>
+        </span>
+    </inc-container>
+</ion-content>

@@ -14,7 +14,8 @@ import { PipesModule } from './../shared/pipes/pipes.module';
 const routes: Routes = [
   {
     path: '',
-    component: ObservationListPage
+    component: ObservationListPage,
+    data: { title: 'Áttekintés' }
   }
 ];
 

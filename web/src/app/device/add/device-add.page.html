@@ -1,0 +1,12 @@
+<inc-toolbar defHref="/main/device-list"></inc-toolbar>
+<ion-content>
+  <ion-toolbar color="primary">
+    <ion-title>{{title | translate}}</ion-title>
+  </ion-toolbar>
+  <inc-container>
+    <ion-card no-margin>
+      <inc-device-add [inData]="deviceForUpdate" [typeList]="typeList" (callUpdate)='update($event)'
+        (callSave)='save($event)'></inc-device-add>
+    </ion-card>
+  </inc-container>
+</ion-content>

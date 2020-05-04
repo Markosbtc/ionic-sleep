@@ -11,7 +11,8 @@ import { SleepPage } from './sleep.page';
 const routes: Routes = [
   {
     path: '',
-    component: SleepPage
+    component: SleepPage,
+    data: { title: 'Alvás adatok hozzáadása' }
   }
 ];
 

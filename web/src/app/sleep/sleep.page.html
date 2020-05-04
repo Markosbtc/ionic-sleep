@@ -7,7 +7,7 @@
 
     <form [formGroup]="sleepForm" (ngSubmit)="synchronization()">
       <ion-item *ngFor="let sleepInput of sleepInputs">
-        <ion-label position="floating">{{sleepInput.text}}
+        <ion-label position="floating">{{sleepInput.text | translate}}
           <span class="required">*</span>
         </ion-label>
         <ion-input type="{{sleepInput.type}}" clearInput formControlName="{{sleepInput.formControlName}}">

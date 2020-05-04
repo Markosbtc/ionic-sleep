@@ -9,17 +9,17 @@ import { ToastService } from '@inclouded/ionic4-inclouded-lib';
 
 export const SLEEP_INPUTS = [
   {
-    text: 'Könnyű Alvás',
+    text: 'LIGHT_SLEEP',
     formControlName: 'lightSleep',
     type: 'number'
   },
   {
-    text: 'Mély alvás',
+    text: 'DEEP_SLEEP',
     formControlName: 'deepSleep',
     type: 'number'
   },
   {
-    text: 'Ébrenlét',
+    text: 'AWAKE_SLEEP',
     formControlName: 'wakeSleep',
     type: 'number'
   },
@@ -33,7 +33,7 @@ export const SLEEP_INPUTS = [
 })
 
 export class SleepPage implements OnInit {
-  title = 'SLEEP';
+  title = 'ADD_SLEEP';
   date = new Date();
 
   // manual adding declarations
@@ -171,4 +171,24 @@ export class SleepPage implements OnInit {
     } as IObservation;
   }
 
+
+  /* fillDBwithRandomObservations() {
+    for (let i = 1; i < 60; i++) {
+      const date = new Date(new Date().setDate(new Date().getDate() + i));
+      const light = this.getRandomInt(240, 540);
+      const deep = this.getRandomInt(30, 240);
+      let wake = 0;
+      if (i % 5 !== 0) {
+        wake = this.getRandomInt(0, 60);
+      }
+
+      this.upload(this.createSleepingObservation('123-123-123', date, light, deep, wake));
+    }
+  }
+
+  getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  } */
 }

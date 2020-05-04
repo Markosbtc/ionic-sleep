@@ -16,8 +16,10 @@ const routes: Routes = [
     children: [
       { path: 'observation-list', loadChildren: './../observation-list/observation-list.module#ObservationListPageModule' },
       { path: 'sleep', loadChildren: './../sleep/sleep.module#SleepPageModule' },
+      { path: 'device-list', loadChildren: './../device/list/device-list.module#DeviceListPageModule' },
+      { path: 'patient-list', loadChildren: './../patient/list/patient-list.module#PatientListPageModule' },
     ],
-    // canActivateChild: [AuthGuard]
+    canActivateChild: [AuthGuard]
   },
 ];
 
@@ -31,4 +33,4 @@ const routes: Routes = [
   ],
   declarations: [MainPage]
 })
-export class MainPageModule {}
+export class MainPageModule { }

@@ -16,7 +16,7 @@
           <ion-grid class="ion-text-center">
             <ion-row *ngFor="let row of sleepTableDetails; let i = index">
               <ion-col *ngFor="let sleepStat of sleepTableDetails[i]">
-                <ion-label> {{ sleepStat.label }} </ion-label><br>
+                <ion-label> {{ sleepStat.label | translate }} </ion-label><br>
                 <ion-text color="primary"> {{ sleepStat.data | minuteToHour }} </ion-text>
               </ion-col>
             </ion-row>
