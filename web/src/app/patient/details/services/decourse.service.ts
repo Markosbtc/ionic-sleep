@@ -11,14 +11,19 @@ export class DecourseService {
   constructor(private afs: AngularFirestore) { }
 
   add(decourse: any): Promise<any> {
-    decourse.date = (decourse.date as Date).toISOString();
+    decourse.date = new Date(decourse.onsetDateTime).toISOString();
 
     return new Promise<any>((resolve, reject) => {
       this.afs
         .collection('Decourses-DEMO')
-        .doc(decourse.id)
-        .set(decourse)
-        .then(res => { resolve(res); }, err => reject(err));
+        .add(decourse)
+        .then(res => {
+          resolve(res);
+          this.afs
+          .collection('Decourses-DEMO')
+          .doc(res.id)
+          .update({id: res.id});
+        }, err => reject(err));
     });
   }
 

@@ -173,7 +173,7 @@ export class SleepPage implements OnInit {
 
 
   /* fillDBwithRandomObservations() {
-    for (let i = 1; i < 60; i++) {
+    for (let i = -7; i < 60; i++) {
       const date = new Date(new Date().setDate(new Date().getDate() + i));
       const light = this.getRandomInt(240, 540);
       const deep = this.getRandomInt(30, 240);
