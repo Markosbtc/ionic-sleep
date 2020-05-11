@@ -1,0 +1,1063 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>web documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">web documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Keresendő kifejezés"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Komponensek</li>
+  <li>DeviceDetailsPage</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/device/details/device-details.page.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implementált interfészek</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+    </p>
+
+
+<section>
+    <h3>Metaadatok</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-device-details</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./device-details.page.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./device-details.page.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Tartalomjegyzék</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Tagváltozók</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#device">device</a>
+                            </li>
+                            <li>
+                                <a href="#getDeviceRoute">getDeviceRoute</a>
+                            </li>
+                            <li>
+                                <a href="#provList">provList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#storage">storage</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Metódusok</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#addProv">addProv</a>
+                            </li>
+                            <li>
+                                <a href="#getDeviceFromRoute">getDeviceFromRoute</a>
+                            </li>
+                            <li>
+                                <a href="#getProvenances">getProvenances</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnDestroy">ngOnDestroy</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onCallDelete">onCallDelete</a>
+                            </li>
+                            <li>
+                                <a href="#onCallUpdate">onCallUpdate</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Konstruktor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(activatedRoute: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, deviceService: <a href="../injectables/DeviceService.html">DeviceService</a>, provenanceService: <a href="../injectables/ProvenanceService.html">ProvenanceService</a>, alertService: AlertService, storage: Storage)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Definíció helye: <a href="" data-line="19" class="link-to-prism">src/app/device/details/device-details.page.ts:19</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Paraméterek :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Név</td>
+                                                    <td>Típus</td>
+                                                <td>Opcionális</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>activatedRoute</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            Nem
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            Nem
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>deviceService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/DeviceService.html" target="_self" >DeviceService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            Nem
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>provenanceService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ProvenanceService.html" target="_self" >ProvenanceService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            Nem
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>alertService</td>
+                                                  
+                                                        <td>
+                                                                    <code>AlertService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            Nem
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>storage</td>
+                                                  
+                                                        <td>
+                                                                    <code>Storage</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            Nem
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Metódusok
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addProv"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            addProv
+                        </b>
+                        <a href="#addProv"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>addProv(device: IDevice, comment: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definíció helye: <a href="" data-line="87"
+                            class="link-to-prism">src/app/device/details/device-details.page.ts:87</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Paraméterek :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Név</td>
+                                    <td>Típus</td>
+                                    <td>Opcionális</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>device</td>
+                                    <td>
+                                            <code>IDevice</code>
+                                    </td>
+
+                                    <td>
+                                        Nem
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>comment</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Nem
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Visszatérési érték : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getDeviceFromRoute"></a>
+                    <span class="name">
+                        <b>
+                            getDeviceFromRoute
+                        </b>
+                        <a href="#getDeviceFromRoute"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getDeviceFromRoute()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definíció helye: <a href="" data-line="38"
+                            class="link-to-prism">src/app/device/details/device-details.page.ts:38</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Visszatérési érték : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getProvenances"></a>
+                    <span class="name">
+                        <b>
+                            getProvenances
+                        </b>
+                        <a href="#getProvenances"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getProvenances()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definíció helye: <a href="" data-line="49"
+                            class="link-to-prism">src/app/device/details/device-details.page.ts:49</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Visszatérési érték : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnDestroy"></a>
+                    <span class="name">
+                        <b>
+                            ngOnDestroy
+                        </b>
+                        <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definíció helye: <a href="" data-line="31"
+                            class="link-to-prism">src/app/device/details/device-details.page.ts:31</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Visszatérési érték : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definíció helye: <a href="" data-line="27"
+                            class="link-to-prism">src/app/device/details/device-details.page.ts:27</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Visszatérési érték : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onCallDelete"></a>
+                    <span class="name">
+                        <b>
+                            onCallDelete
+                        </b>
+                        <a href="#onCallDelete"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onCallDelete(event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definíció helye: <a href="" data-line="59"
+                            class="link-to-prism">src/app/device/details/device-details.page.ts:59</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Paraméterek :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Név</td>
+                                    <td>Típus</td>
+                                    <td>Opcionális</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        Nem
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Visszatérési érték : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onCallUpdate"></a>
+                    <span class="name">
+                        <b>
+                            onCallUpdate
+                        </b>
+                        <a href="#onCallUpdate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onCallUpdate(event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definíció helye: <a href="" data-line="69"
+                            class="link-to-prism">src/app/device/details/device-details.page.ts:69</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Paraméterek :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Név</td>
+                                    <td>Típus</td>
+                                    <td>Opcionális</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        Nem
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Visszatérési érték : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Tagváltozók
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="device"></a>
+                        <span class="name">
+                            <b>
+                            device</b>
+                            <a href="#device"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Típus : </i>    <code>IDevice</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definíció helye: <a href="" data-line="17" class="link-to-prism">src/app/device/details/device-details.page.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getDeviceRoute"></a>
+                        <span class="name">
+                            <b>
+                            getDeviceRoute</b>
+                            <a href="#getDeviceRoute"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Típus : </i>    <code>Subscription</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definíció helye: <a href="" data-line="18" class="link-to-prism">src/app/device/details/device-details.page.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="provList"></a>
+                        <span class="name">
+                            <b>
+                            provList</b>
+                            <a href="#provList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Típus : </i>    <code>MatTableDataSource&lt;IProvenance&gt;</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definíció helye: <a href="" data-line="19" class="link-to-prism">src/app/device/details/device-details.page.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="storage"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            storage</b>
+                            <a href="#storage"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Típus : </i>    <code>Storage</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definíció helye: <a href="" data-line="24" class="link-to-prism">src/app/device/details/device-details.page.ts:24</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ProvenanceService } from &#x27;./../service/provenance.service&#x27;;
+import { AlertService } from &#x27;@inclouded/ionic4-inclouded-lib&#x27;;
+import { Subscription } from &#x27;rxjs&#x27;;
+import { IDevice, DeviceStatusKind, IProvenance } from &#x27;@ahryman40k/ts-fhir-types/lib/R4&#x27;;
+import { Component, OnInit, OnDestroy } from &#x27;@angular/core&#x27;;
+import { ActivatedRoute, Router } from &#x27;@angular/router&#x27;;
+import { Storage } from &#x27;@ionic/storage&#x27;;
+import { DeviceService } from &#x27;../service/device.service&#x27;;
+import { MatTableDataSource } from &#x27;@angular/material&#x27;;
+
+@Component({
+  selector: &#x27;app-device-details&#x27;,
+  templateUrl: &#x27;./device-details.page.html&#x27;,
+  styleUrls: [&#x27;./device-details.page.scss&#x27;],
+})
+export class DeviceDetailsPage implements OnInit, OnDestroy {
+  device: IDevice;
+  getDeviceRoute: Subscription;
+  provList: MatTableDataSource&lt;IProvenance&gt;;
+
+  constructor(
+    private activatedRoute: ActivatedRoute, private router: Router, private deviceService: DeviceService,
+    private provenanceService: ProvenanceService,
+    private alertService: AlertService, public storage: Storage
+  ) { }
+
+  ngOnInit() {
+    this.getDeviceFromRoute();
+  }
+
+  ngOnDestroy() {
+    if (this.getDeviceRoute) {
+      this.getDeviceRoute.unsubscribe();
+    }
+    localStorage.removeItem(&#x27;device&#x27;);
+  }
+
+  getDeviceFromRoute() {
+    this.getDeviceRoute &#x3D; this.activatedRoute.paramMap.subscribe(() &#x3D;&gt; {
+      const device: IDevice &#x3D; window.history.state.parameter;
+      if (device) {
+        localStorage.setItem(&#x27;device&#x27;, JSON.stringify(device));
+      }
+      this.device &#x3D; JSON.parse(localStorage.getItem(&#x27;device&#x27;));
+      this.getProvenances();
+    });
+  }
+
+  getProvenances() {
+    if (this.device) {
+      this.provenanceService.getProvenances(this.device.id).subscribe(result &#x3D;&gt; {
+        if (result) {
+          this.provList &#x3D; new MatTableDataSource(result);
+        }
+      });
+    }
+  }
+
+  onCallDelete(event: any) {
+    if (event) {
+      this.deviceService.deleteDevice(event).then(
+        () &#x3D;&gt; {
+          this.router.navigateByUrl(&#x27;/main/device-list&#x27;);
+        }
+      );
+    }
+  }
+
+  onCallUpdate(event: any) {
+    if (event) {
+      const status &#x3D; DeviceStatusKind;
+      let comment &#x3D; &#x27;&#x27;;
+      event.device.status &#x3D; status[&#x27;_&#x27; + event.status] as DeviceStatusKind;
+      event.device.patient.reference &#x3D; event.statusValue.taj;
+      event.device.patient.display &#x3D; event.statusValue.name;
+      comment &#x3D; event.statusValue.comment;
+      this.deviceService.updateDevice(event.device).then(() &#x3D;&gt; {
+        this.device &#x3D; event.device;
+        this.addProv(this.device, comment);
+        localStorage.setItem(&#x27;device&#x27;, JSON.stringify(this.device));
+      }, () &#x3D;&gt; {
+        this.alertService.presentError(&#x27;UPDATE_DEVICE_UNSUCCESSFULL&#x27;);
+      });
+    }
+  }
+
+  async addProv(device: IDevice, comment: string) {
+    const user &#x3D; await this.storage.get(&#x27;user&#x27;);
+    const prov: any &#x3D; {
+      agent: [{
+        who: {
+          display: user.displayName || &#x27;&#x27;,
+          reference: user.uid
+        },
+      }],
+      entity: [{
+        what: {
+          reference: device.id,
+          display: device.identifier[0].value
+        }
+      }],
+      reason: [{
+        text: device.status
+      }, { text: comment }],
+      recorded: new Date(),
+      target: [device.patient]
+    };
+    this.provenanceService.addProvenance(prov).then(() &#x3D;&gt; { }, () &#x3D;&gt; { });
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;inc-toolbar defHref&#x3D;&quot;/main/device-list&quot;&gt;&lt;/inc-toolbar&gt;
+&lt;ion-content&gt;
+  &lt;ion-toolbar color&#x3D;&quot;primary&quot;&gt;
+    &lt;ion-title&gt;{{&#x27;DEVICE_DETAILS&#x27; | translate}}
+      &lt;ion-chip color&#x3D;&quot;light&quot; outline&#x3D;&quot;true&quot; style&#x3D;&quot;border-radius: 0;&quot; *ngIf&#x3D;&quot;device&quot;&gt;
+        &lt;ion-label&gt;{{device.identifier[0].value}}&lt;/ion-label&gt;
+      &lt;/ion-chip&gt;
+    &lt;/ion-title&gt;
+  &lt;/ion-toolbar&gt;
+  &lt;inc-container&gt;
+    &lt;ion-card class&#x3D;&quot;ion-no-margin ion-margin-bottom&quot;&gt;
+      &lt;ion-text color&#x3D;&quot;primary&quot; class&#x3D;&quot;ion-text-uppercase ion-padding&quot; style&#x3D;&quot;padding-bottom: 0;&quot;&gt;
+        &lt;b&gt;{{&#x27;DEVICE&#x27; | translate}}&lt;/b&gt;
+      &lt;/ion-text&gt;
+      &lt;inc-device-details (callDelete)&#x3D;&quot;onCallDelete($event)&quot;&gt;&lt;/inc-device-details&gt;
+    &lt;/ion-card&gt;
+    &lt;ion-card class&#x3D;&quot;ion-padding ion-no-margin ion-margin-bottom&quot; *ngIf&#x3D;&quot;device&quot;&gt;
+      &lt;ion-text color&#x3D;&quot;primary&quot; class&#x3D;&quot;ion-text-uppercase&quot;&gt;
+        &lt;b&gt;{{&#x27;STATUS&#x27; | translate}}&lt;/b&gt;
+      &lt;/ion-text&gt;
+      &lt;inc-device-status (callUpdate)&#x3D;&quot;onCallUpdate($event)&quot; [device]&#x3D;&quot;device&quot;&gt;&lt;/inc-device-status&gt;
+    &lt;/ion-card&gt;
+    &lt;ion-card class&#x3D;&quot;ion-no-margin ion-margin-bottom mat-elevation-z6&quot;
+      *ngIf&#x3D;&quot;provList &amp;&amp; provList.data &amp;&amp; provList.data.length &gt; 0&quot;&gt;
+      &lt;ion-text color&#x3D;&quot;primary&quot; class&#x3D;&quot;ion-text-uppercase ion-padding&quot; style&#x3D;&quot;padding-bottom: 0;&quot;&gt;
+        &lt;b&gt;{{&#x27;HISTORY_BUTTON&#x27; | translate}}&lt;/b&gt;
+      &lt;/ion-text&gt;
+      &lt;inc-device-status-table [list]&#x3D;&quot;provList&quot;&gt;&lt;/inc-device-status-table&gt;
+    &lt;/ion-card&gt;
+  &lt;/inc-container&gt;
+&lt;/ion-content&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./device-details.page.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">ion-text {
+    display: block;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Jelmagyarázat</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html elem</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Komponens</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html elem direktívával</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><inc-toolbar defHref="/main/device-list"></inc-toolbar><ion-content>  <ion-toolbar color="primary">    <ion-title>{{\'DEVICE_DETAILS\' | translate}}      <ion-chip color="light" outline="true" style="border-radius: 0;" *ngIf="device">        <ion-label>{{device.identifier[0].value}}</ion-label>      </ion-chip>    </ion-title>  </ion-toolbar>  <inc-container>    <ion-card class="ion-no-margin ion-margin-bottom">      <ion-text color="primary" class="ion-text-uppercase ion-padding" style="padding-bottom: 0;">        <b>{{\'DEVICE\' | translate}}</b>      </ion-text>      <inc-device-details (callDelete)="onCallDelete($event)"></inc-device-details>    </ion-card>    <ion-card class="ion-padding ion-no-margin ion-margin-bottom" *ngIf="device">      <ion-text color="primary" class="ion-text-uppercase">        <b>{{\'STATUS\' | translate}}</b>      </ion-text>      <inc-device-status (callUpdate)="onCallUpdate($event)" [device]="device"></inc-device-status>    </ion-card>    <ion-card class="ion-no-margin ion-margin-bottom mat-elevation-z6"      *ngIf="provList && provList.data && provList.data.length > 0">      <ion-text color="primary" class="ion-text-uppercase ion-padding" style="padding-bottom: 0;">        <b>{{\'HISTORY_BUTTON\' | translate}}</b>      </ion-text>      <inc-device-status-table [list]="provList"></inc-device-status-table>    </ion-card>  </inc-container></ion-content></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppointmentModalComponent', 'selector': 'app-appointment-modal'},{'name': 'CareComponent', 'selector': 'app-care'},{'name': 'CarePlanAddModalComponent', 'selector': 'app-care-plan-add-modal'},{'name': 'ConditionModalComponent', 'selector': 'app-condition-modal'},{'name': 'DecourseAddModalComponent', 'selector': 'app-decourse-add-modal'},{'name': 'DecourseComponent', 'selector': 'app-decourse'},{'name': 'DetectionPageComponent', 'selector': 'app-detection-page'},{'name': 'DeviceAddPage', 'selector': 'app-device-add'},{'name': 'DeviceDetailsPage', 'selector': 'app-device-details'},{'name': 'DeviceListPage', 'selector': 'app-device-list'},{'name': 'GoalAddModalComponent', 'selector': 'app-goal-add-modal'},{'name': 'MainPage', 'selector': 'app-main'},{'name': 'MedicalChartComponent', 'selector': 'app-medical-chart'},{'name': 'MedicationModalComponent', 'selector': 'app-medication-modal'},{'name': 'ObservationListPage', 'selector': 'app-observation-list'},{'name': 'OdAddModalComponent', 'selector': 'app-od-add-modal'},{'name': 'PatientAddPage', 'selector': 'app-patient-add'},{'name': 'PatientDetailsPage', 'selector': 'app-patient-details'},{'name': 'PatientListPage', 'selector': 'app-patient-list'},{'name': 'ProfilePage', 'selector': 'app-profile'},{'name': 'RequestModalComponent', 'selector': 'app-request-modal'},{'name': 'SettingsPage', 'selector': 'app-settings'},{'name': 'SleepChartComponent', 'selector': 'app-sleep-chart'},{'name': 'SleepChartComponent', 'selector': 'app-sleep-chart'},{'name': 'SleepPage', 'selector': 'app-sleep'},{'name': 'SpecificDatasComponent', 'selector': 'app-specific-datas'},{'name': 'TakedMedicationModalComponent', 'selector': 'app-taked-medication-modal'}];
+    var DIRECTIVES = [{'name': 'GinaControllerDirective', 'selector': '[GinaController]'}];
+    var ACTUAL_COMPONENT = {'name': 'DeviceDetailsPage'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">Nincs találat "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'DeviceDetailsPage.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

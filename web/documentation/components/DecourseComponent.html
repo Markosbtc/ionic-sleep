@@ -1,0 +1,1226 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>web documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">web documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Keresendő kifejezés"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Komponensek</li>
+  <li>DecourseComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/patient/details/detection-page/decourse/decourse.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implementált interfészek</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metaadatok</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-decourse</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./decourse.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./decourse.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Tartalomjegyzék</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Tagváltozók</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#decourses">decourses</a>
+                            </li>
+                            <li>
+                                <a href="#loading">loading</a>
+                            </li>
+                            <li>
+                                <a href="#modalComponents">modalComponents</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Metódusok</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getData">getData</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onCallMore">onCallMore</a>
+                            </li>
+                            <li>
+                                <a href="#onTabChange">onTabChange</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#openActionSheet">openActionSheet</a>
+                            </li>
+                            <li>
+                                <a href="#openDeleteAlert">openDeleteAlert</a>
+                            </li>
+                            <li>
+                                <a href="#openModal">openModal</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Bemenetek</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#patient">patient</a>
+                            </li>
+                            <li>
+                                <a href="#user">user</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Konstruktor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(actionSheetController: ActionSheetController, translatePipe: TranslatePipe, modalService: ModalService, alertService: AlertService, decourseService: <a href="../injectables/DecourseService.html">DecourseService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Definíció helye: <a href="" data-line="23" class="link-to-prism">src/app/patient/details/detection-page/decourse/decourse.component.ts:23</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Paraméterek :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Név</td>
+                                                    <td>Típus</td>
+                                                <td>Opcionális</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>actionSheetController</td>
+                                                  
+                                                        <td>
+                                                                    <code>ActionSheetController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            Nem
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>translatePipe</td>
+                                                  
+                                                        <td>
+                                                                    <code>TranslatePipe</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            Nem
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>modalService</td>
+                                                  
+                                                        <td>
+                                                                    <code>ModalService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            Nem
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>alertService</td>
+                                                  
+                                                        <td>
+                                                                    <code>AlertService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            Nem
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>decourseService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/DecourseService.html" target="_self" >DecourseService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            Nem
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Bemenetek</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="patient"></a>
+                        <b>patient</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Típus : </i>    <code>IPatient</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Definíció helye: <a href="" data-line="14" class="link-to-prism">src/app/patient/details/detection-page/decourse/decourse.component.ts:14</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="user"></a>
+                        <b>user</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Típus : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Definíció helye: <a href="" data-line="15" class="link-to-prism">src/app/patient/details/detection-page/decourse/decourse.component.ts:15</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Metódusok
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getData"></a>
+                    <span class="name">
+                        <b>
+                            getData
+                        </b>
+                        <a href="#getData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getData(index: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definíció helye: <a href="" data-line="33"
+                            class="link-to-prism">src/app/patient/details/detection-page/decourse/decourse.component.ts:33</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Paraméterek :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Név</td>
+                                    <td>Típus</td>
+                                    <td>Opcionális</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>index</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        Nem
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Visszatérési érték : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definíció helye: <a href="" data-line="29"
+                            class="link-to-prism">src/app/patient/details/detection-page/decourse/decourse.component.ts:29</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Visszatérési érték : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onCallMore"></a>
+                    <span class="name">
+                        <b>
+                            onCallMore
+                        </b>
+                        <a href="#onCallMore"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onCallMore(componentName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, data)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definíció helye: <a href="" data-line="52"
+                            class="link-to-prism">src/app/patient/details/detection-page/decourse/decourse.component.ts:52</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Paraméterek :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Név</td>
+                                    <td>Típus</td>
+                                    <td>Opcionális</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>componentName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Nem
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>data</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        Nem
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Visszatérési érték : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onTabChange"></a>
+                    <span class="name">
+                        <b>
+                            onTabChange
+                        </b>
+                        <a href="#onTabChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onTabChange(event)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definíció helye: <a href="" data-line="110"
+                            class="link-to-prism">src/app/patient/details/detection-page/decourse/decourse.component.ts:110</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Paraméterek :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Név</td>
+                                    <td>Opcionális</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+
+                                    <td>
+                                        Nem
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Visszatérési érték : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openActionSheet"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            openActionSheet
+                        </b>
+                        <a href="#openActionSheet"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>openActionSheet(componentName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, inData)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definíció helye: <a href="" data-line="58"
+                            class="link-to-prism">src/app/patient/details/detection-page/decourse/decourse.component.ts:58</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Paraméterek :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Név</td>
+                                    <td>Típus</td>
+                                    <td>Opcionális</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>componentName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Nem
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>inData</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        Nem
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Visszatérési érték : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openDeleteAlert"></a>
+                    <span class="name">
+                        <b>
+                            openDeleteAlert
+                        </b>
+                        <a href="#openDeleteAlert"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openDeleteAlert(componentName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definíció helye: <a href="" data-line="100"
+                            class="link-to-prism">src/app/patient/details/detection-page/decourse/decourse.component.ts:100</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Paraméterek :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Név</td>
+                                    <td>Típus</td>
+                                    <td>Opcionális</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>componentName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Nem
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Nem
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Visszatérési érték : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openModal"></a>
+                    <span class="name">
+                        <b>
+                            openModal
+                        </b>
+                        <a href="#openModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openModal(componentName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, editableData?)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definíció helye: <a href="" data-line="74"
+                            class="link-to-prism">src/app/patient/details/detection-page/decourse/decourse.component.ts:74</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Paraméterek :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Név</td>
+                                    <td>Típus</td>
+                                    <td>Opcionális</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>componentName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Nem
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>editableData</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        Igen
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Visszatérési érték : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Tagváltozók
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="decourses"></a>
+                        <span class="name">
+                            <b>
+                            decourses</b>
+                            <a href="#decourses"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Típus : </i>    <code>any[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Alapértelmezett érték : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definíció helye: <a href="" data-line="19" class="link-to-prism">src/app/patient/details/detection-page/decourse/decourse.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="loading"></a>
+                        <span class="name">
+                            <b>
+                            loading</b>
+                            <a href="#loading"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Alapértelmezett érték : </i><code>true</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definíció helye: <a href="" data-line="17" class="link-to-prism">src/app/patient/details/detection-page/decourse/decourse.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="modalComponents"></a>
+                        <span class="name">
+                            <b>
+                            modalComponents</b>
+                            <a href="#modalComponents"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Típus : </i>    <code>AssociativeArray</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Alapértelmezett érték : </i><code>{
+    decourse: () &#x3D;&gt; DecourseAddModalComponent
+  }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definíció helye: <a href="" data-line="21" class="link-to-prism">src/app/patient/details/detection-page/decourse/decourse.component.ts:21</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Input } from &#x27;@angular/core&#x27;;
+import { ActionSheetController } from &#x27;@ionic/angular&#x27;;
+import { TranslatePipe, AssociativeArray, AlertService, ModalService } from &#x27;@inclouded/ionic4-inclouded-lib&#x27;;
+import { IPatient } from &#x27;@ahryman40k/ts-fhir-types/lib/R4&#x27;;
+import { DecourseService } from &#x27;../../services/decourse.service&#x27;;
+import { DecourseAddModalComponent } from &#x27;./decourse-add-modal/decourse-add-modal.component&#x27;;
+
+@Component({
+  selector: &#x27;app-decourse&#x27;,
+  templateUrl: &#x27;./decourse.component.html&#x27;,
+  styleUrls: [&#x27;./decourse.component.scss&#x27;],
+})
+export class DecourseComponent implements OnInit {
+  @Input() patient: IPatient;
+  @Input() user: any;
+
+  loading &#x3D; true;
+
+  decourses: any[] &#x3D; [];
+
+  modalComponents: AssociativeArray &#x3D; {
+    decourse: () &#x3D;&gt; DecourseAddModalComponent
+  };
+
+  constructor(
+    private actionSheetController: ActionSheetController, private translatePipe: TranslatePipe,
+    private modalService: ModalService, private alertService: AlertService, private decourseService: DecourseService) { }
+
+  ngOnInit() {
+    this.getData(0);
+  }
+
+  getData(index: number): void {
+
+    if (index &#x3D;&#x3D;&#x3D; 0) {
+
+    } else {
+
+    }
+
+    this.loading &#x3D; true;
+
+    this.decourseService.getByPatient(this.patient.id).then(res &#x3D;&gt; {
+      this.decourses &#x3D; res;
+      this.loading &#x3D; false;
+    }).catch(error &#x3D;&gt; {
+      console.error(error);
+      this.loading &#x3D; false;
+    });
+  }
+
+  onCallMore(componentName: string, data) {
+    if (data) {
+      this.openActionSheet(componentName, data);
+    }
+  }
+
+  async openActionSheet(componentName: string, inData) {
+    const actionSheet &#x3D; await this.actionSheetController.create({
+      buttons: [{
+        text: this.translatePipe.transform(&#x27;EDIT_L&#x27;),
+        icon: &#x27;create&#x27;,
+        handler: () &#x3D;&gt; { this.openModal(componentName, inData); }
+      },
+      {
+        text: this.translatePipe.transform(&#x27;DELETE_L&#x27;),
+        icon: &#x27;trash&#x27;,
+        handler: () &#x3D;&gt; { this.openDeleteAlert(componentName, inData.id); }
+      }]
+    });
+    await actionSheet.present();
+  }
+
+  openModal(componentName: string, editableData?) {
+    let params: any &#x3D; { patient: this.patient, user: this.user };
+    if (editableData) {
+      params &#x3D; { patient: this.patient, user: this.user, inData: editableData };
+    }
+    this.modalService.presentModal(this.modalComponents[componentName](), params).then(modal &#x3D;&gt; {
+      modal.onDidDismiss().then(detail &#x3D;&gt; {
+        if (detail &amp;&amp; detail.data) {
+          if (editableData) {
+            this[componentName + &#x27;Service&#x27;].update(detail.data).then(() &#x3D;&gt; {
+              this.decourseService.getByPatient(this.patient.id).then(res &#x3D;&gt; {
+                this.decourses &#x3D; res;
+              });
+            });
+          } else {
+            this[componentName + &#x27;Service&#x27;].add(detail.data).then(() &#x3D;&gt; {
+              this.decourseService.getByPatient(this.patient.id).then(res &#x3D;&gt; {
+                this.decourses &#x3D; res;
+              });
+            });
+          }
+        }
+      });
+    });
+  }
+
+  openDeleteAlert(componentName: string, id: string) {
+    this.alertService.presentDelete(id, componentName.toUpperCase(), () &#x3D;&gt; {
+      this[componentName + &#x27;Service&#x27;].delete(id).then(() &#x3D;&gt; {
+        this.decourseService.getByPatient(this.patient.id).then(res &#x3D;&gt; {
+          this.decourses &#x3D; res;
+        });
+      });
+    });
+  }
+
+  onTabChange(event): void {
+    this.getData(event);
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;inc-title-btn title&#x3D;&quot;DECOURSE&quot; btnTxt&#x3D;&quot;DECOURSE&quot; (callClick)&#x3D;&quot;openModal(&#x27;decourse&#x27;)&quot;&gt;&lt;/inc-title-btn&gt;
+&lt;ion-card class&#x3D;&quot;ion-no-margin ion-no-padding&quot;&gt;
+  &lt;ion-card-content&gt;
+    &lt;mat-tab-group mat-align-tabs&#x3D;&quot;center&quot; dynamicHeight&#x3D;&quot;true&quot; (selectedTabChange)&#x3D;&quot;onTabChange($event)&quot;&gt;
+      &lt;mat-tab id&#x3D;&quot;closed-alerts&quot;&gt;
+        &lt;ng-template mat-tab-label&gt;
+          &lt;span class&#x3D;&quot;ion-text-capitalize&quot;&gt;{{&#x27;CLOSED_ALERTS&#x27;| translate}}&lt;/span&gt;
+        &lt;/ng-template&gt;
+        &lt;ng-template matTabContent&gt;
+          &lt;inc-page-loader [loading]&#x3D;&quot;loading&quot;&gt;&lt;/inc-page-loader&gt;
+          &lt;div *ngIf&#x3D;&quot;decourses.length &#x3D;&#x3D;&#x3D; 0&quot;&gt;
+            &lt;br&gt;
+            &lt;inc-err-no-data *ngIf&#x3D;&quot;decourses.length &#x3D;&#x3D;&#x3D; 0 &amp;&amp; !loading&quot; subjectName&#x3D;&quot;{{&#x27;DECOURSE&#x27; | translate}}&quot;
+              noDesc&#x3D;&quot;true&quot;&gt;
+            &lt;/inc-err-no-data&gt;
+          &lt;/div&gt;
+          &lt;inc-container&gt;
+            &lt;inc-decourse-details *ngIf&#x3D;&quot;decourses.length &gt; 0&quot; [inData]&#x3D;&quot;decourses&quot;
+              (callMore)&#x3D;&quot;onCallMore(&#x27;decourse&#x27;, $event)&quot;&gt;
+            &lt;/inc-decourse-details&gt;
+          &lt;/inc-container&gt;
+        &lt;/ng-template&gt;
+      &lt;/mat-tab&gt;
+      &lt;mat-tab id&#x3D;&quot;other-comments&quot;&gt;
+        &lt;ng-template mat-tab-label&gt;
+          &lt;span class&#x3D;&quot;ion-text-capitalize&quot;&gt;{{&#x27;OTHER_COMMENTS&#x27;| translate}}&lt;/span&gt;
+        &lt;/ng-template&gt;
+        &lt;ng-template matTabContent&gt;
+          &lt;inc-page-loader [loading]&#x3D;&quot;loading&quot;&gt;&lt;/inc-page-loader&gt;
+          &lt;div *ngIf&#x3D;&quot;decourses.length &#x3D;&#x3D;&#x3D; 0&quot;&gt;
+            &lt;br&gt;
+            &lt;inc-err-no-data *ngIf&#x3D;&quot;decourses.length &#x3D;&#x3D;&#x3D; 0 &amp;&amp; !loading&quot; subjectName&#x3D;&quot;{{&#x27;DECOURSE&#x27; | translate}}&quot;
+              noDesc&#x3D;&quot;true&quot;&gt;
+            &lt;/inc-err-no-data&gt;
+          &lt;/div&gt;
+          &lt;inc-container&gt;
+            &lt;inc-decourse-details *ngIf&#x3D;&quot;decourses.length &gt; 0&quot; [inData]&#x3D;&quot;decourses&quot;
+              (callMore)&#x3D;&quot;onCallMore(&#x27;decourse&#x27;, $event)&quot;&gt;
+            &lt;/inc-decourse-details&gt;
+          &lt;/inc-container&gt;
+        &lt;/ng-template&gt;
+      &lt;/mat-tab&gt;
+    &lt;/mat-tab-group&gt;
+  &lt;/ion-card-content&gt;
+&lt;/ion-card&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./decourse.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Jelmagyarázat</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html elem</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Komponens</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html elem direktívával</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><inc-title-btn title="DECOURSE" btnTxt="DECOURSE" (callClick)="openModal(\'decourse\')"></inc-title-btn><ion-card class="ion-no-margin ion-no-padding">  <ion-card-content>    <mat-tab-group mat-align-tabs="center" dynamicHeight="true" (selectedTabChange)="onTabChange($event)">      <mat-tab id="closed-alerts">        <ng-template mat-tab-label>          <span class="ion-text-capitalize">{{\'CLOSED_ALERTS\'| translate}}</span>        </ng-template>        <ng-template matTabContent>          <inc-page-loader [loading]="loading"></inc-page-loader>          <div *ngIf="decourses.length === 0">            <br>            <inc-err-no-data *ngIf="decourses.length === 0 && !loading" subjectName="{{\'DECOURSE\' | translate}}"              noDesc="true">            </inc-err-no-data>          </div>          <inc-container>            <inc-decourse-details *ngIf="decourses.length > 0" [inData]="decourses"              (callMore)="onCallMore(\'decourse\', $event)">            </inc-decourse-details>          </inc-container>        </ng-template>      </mat-tab>      <mat-tab id="other-comments">        <ng-template mat-tab-label>          <span class="ion-text-capitalize">{{\'OTHER_COMMENTS\'| translate}}</span>        </ng-template>        <ng-template matTabContent>          <inc-page-loader [loading]="loading"></inc-page-loader>          <div *ngIf="decourses.length === 0">            <br>            <inc-err-no-data *ngIf="decourses.length === 0 && !loading" subjectName="{{\'DECOURSE\' | translate}}"              noDesc="true">            </inc-err-no-data>          </div>          <inc-container>            <inc-decourse-details *ngIf="decourses.length > 0" [inData]="decourses"              (callMore)="onCallMore(\'decourse\', $event)">            </inc-decourse-details>          </inc-container>        </ng-template>      </mat-tab>    </mat-tab-group>  </ion-card-content></ion-card></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppointmentModalComponent', 'selector': 'app-appointment-modal'},{'name': 'CareComponent', 'selector': 'app-care'},{'name': 'CarePlanAddModalComponent', 'selector': 'app-care-plan-add-modal'},{'name': 'ConditionModalComponent', 'selector': 'app-condition-modal'},{'name': 'DecourseAddModalComponent', 'selector': 'app-decourse-add-modal'},{'name': 'DecourseComponent', 'selector': 'app-decourse'},{'name': 'DetectionPageComponent', 'selector': 'app-detection-page'},{'name': 'DeviceAddPage', 'selector': 'app-device-add'},{'name': 'DeviceDetailsPage', 'selector': 'app-device-details'},{'name': 'DeviceListPage', 'selector': 'app-device-list'},{'name': 'GoalAddModalComponent', 'selector': 'app-goal-add-modal'},{'name': 'MainPage', 'selector': 'app-main'},{'name': 'MedicalChartComponent', 'selector': 'app-medical-chart'},{'name': 'MedicationModalComponent', 'selector': 'app-medication-modal'},{'name': 'ObservationListPage', 'selector': 'app-observation-list'},{'name': 'OdAddModalComponent', 'selector': 'app-od-add-modal'},{'name': 'PatientAddPage', 'selector': 'app-patient-add'},{'name': 'PatientDetailsPage', 'selector': 'app-patient-details'},{'name': 'PatientListPage', 'selector': 'app-patient-list'},{'name': 'ProfilePage', 'selector': 'app-profile'},{'name': 'RequestModalComponent', 'selector': 'app-request-modal'},{'name': 'SettingsPage', 'selector': 'app-settings'},{'name': 'SleepChartComponent', 'selector': 'app-sleep-chart'},{'name': 'SleepChartComponent', 'selector': 'app-sleep-chart'},{'name': 'SleepPage', 'selector': 'app-sleep'},{'name': 'SpecificDatasComponent', 'selector': 'app-specific-datas'},{'name': 'TakedMedicationModalComponent', 'selector': 'app-taked-medication-modal'}];
+    var DIRECTIVES = [{'name': 'GinaControllerDirective', 'selector': '[GinaController]'}];
+    var ACTUAL_COMPONENT = {'name': 'DecourseComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">Nincs találat "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'DecourseComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

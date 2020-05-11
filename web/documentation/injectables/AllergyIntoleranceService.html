@@ -1,0 +1,1195 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>web documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">web documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Keresendő kifejezés"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injektálhatók</li>
+  <li>AllergyIntoleranceService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/patient/details/services/allergy-intolerance.service.ts</code>
+        </p>
+
+
+
+
+            <section>
+    <h3 id="index">Tartalomjegyzék</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Tagváltozók</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#allergyIntoleranceApi">allergyIntoleranceApi</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Metódusok</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#add">add</a>
+                            </li>
+                            <li>
+                                <a href="#delete">delete</a>
+                            </li>
+                            <li>
+                                <a href="#getAll">getAll</a>
+                            </li>
+                            <li>
+                                <a href="#getAllergyIntolerancesByCategory">getAllergyIntolerancesByCategory</a>
+                            </li>
+                            <li>
+                                <a href="#getAllergyIntolerancesByClinicalStatus">getAllergyIntolerancesByClinicalStatus</a>
+                            </li>
+                            <li>
+                                <a href="#getAllergyIntolerancesByCodeText">getAllergyIntolerancesByCodeText</a>
+                            </li>
+                            <li>
+                                <a href="#getAllergyIntolerancesByType">getAllergyIntolerancesByType</a>
+                            </li>
+                            <li>
+                                <a href="#getById">getById</a>
+                            </li>
+                            <li>
+                                <a href="#getByPatient">getByPatient</a>
+                            </li>
+                            <li>
+                                <a href="#update">update</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Konstruktor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(afs: AngularFirestore)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Definíció helye: <a href="" data-line="14" class="link-to-prism">src/app/patient/details/services/allergy-intolerance.service.ts:14</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Paraméterek :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Név</td>
+                                                    <td>Típus</td>
+                                                <td>Opcionális</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>afs</td>
+                                                  
+                                                        <td>
+                                                                    <code>AngularFirestore</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            Nem
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Metódusok
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="add"></a>
+                    <span class="name">
+                        <b>
+                            add
+                        </b>
+                        <a href="#add"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>add(data: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, id?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definíció helye: <a href="" data-line="24"
+                            class="link-to-prism">src/app/patient/details/services/allergy-intolerance.service.ts:24</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Paraméterek :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Név</td>
+                                    <td>Típus</td>
+                                    <td>Opcionális</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        Nem
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Igen
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Visszatérési érték : </b>    <code>Promise&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="delete"></a>
+                    <span class="name">
+                        <b>
+                            delete
+                        </b>
+                        <a href="#delete"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>delete(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definíció helye: <a href="" data-line="32"
+                            class="link-to-prism">src/app/patient/details/services/allergy-intolerance.service.ts:32</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Paraméterek :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Név</td>
+                                    <td>Típus</td>
+                                    <td>Opcionális</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Nem
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Visszatérési érték : </b>    <code>Promise&lt;void&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAll"></a>
+                    <span class="name">
+                        <b>
+                            getAll
+                        </b>
+                        <a href="#getAll"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAll(paging?: Paging, orderBy?: OrderBy)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definíció helye: <a href="" data-line="20"
+                            class="link-to-prism">src/app/patient/details/services/allergy-intolerance.service.ts:20</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Paraméterek :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Név</td>
+                                    <td>Típus</td>
+                                    <td>Opcionális</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>paging</td>
+                                    <td>
+                                            <code>Paging</code>
+                                    </td>
+
+                                    <td>
+                                        Igen
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>orderBy</td>
+                                    <td>
+                                            <code>OrderBy</code>
+                                    </td>
+
+                                    <td>
+                                        Igen
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Visszatérési érték : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAllergyIntolerancesByCategory"></a>
+                    <span class="name">
+                        <b>
+                            getAllergyIntolerancesByCategory
+                        </b>
+                        <a href="#getAllergyIntolerancesByCategory"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAllergyIntolerancesByCategory(category: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, orderBy?: OrderBy, paging?: Paging)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definíció helye: <a href="" data-line="52"
+                            class="link-to-prism">src/app/patient/details/services/allergy-intolerance.service.ts:52</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Paraméterek :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Név</td>
+                                    <td>Típus</td>
+                                    <td>Opcionális</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>category</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Nem
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>orderBy</td>
+                                    <td>
+                                            <code>OrderBy</code>
+                                    </td>
+
+                                    <td>
+                                        Igen
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>paging</td>
+                                    <td>
+                                            <code>Paging</code>
+                                    </td>
+
+                                    <td>
+                                        Igen
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Visszatérési érték : </b>    <code>Observable&lt;IAllergyIntolerance[]&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAllergyIntolerancesByClinicalStatus"></a>
+                    <span class="name">
+                        <b>
+                            getAllergyIntolerancesByClinicalStatus
+                        </b>
+                        <a href="#getAllergyIntolerancesByClinicalStatus"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAllergyIntolerancesByClinicalStatus(clinicalStatus: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, orderBy?: OrderBy, paging?: Paging)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definíció helye: <a href="" data-line="44"
+                            class="link-to-prism">src/app/patient/details/services/allergy-intolerance.service.ts:44</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Paraméterek :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Név</td>
+                                    <td>Típus</td>
+                                    <td>Opcionális</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>clinicalStatus</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Nem
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>orderBy</td>
+                                    <td>
+                                            <code>OrderBy</code>
+                                    </td>
+
+                                    <td>
+                                        Igen
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>paging</td>
+                                    <td>
+                                            <code>Paging</code>
+                                    </td>
+
+                                    <td>
+                                        Igen
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Visszatérési érték : </b>    <code>Observable&lt;IAllergyIntolerance[]&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAllergyIntolerancesByCodeText"></a>
+                    <span class="name">
+                        <b>
+                            getAllergyIntolerancesByCodeText
+                        </b>
+                        <a href="#getAllergyIntolerancesByCodeText"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAllergyIntolerancesByCodeText(codeText: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, orderBy?: OrderBy, paging?: Paging)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definíció helye: <a href="" data-line="56"
+                            class="link-to-prism">src/app/patient/details/services/allergy-intolerance.service.ts:56</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Paraméterek :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Név</td>
+                                    <td>Típus</td>
+                                    <td>Opcionális</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>codeText</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Nem
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>orderBy</td>
+                                    <td>
+                                            <code>OrderBy</code>
+                                    </td>
+
+                                    <td>
+                                        Igen
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>paging</td>
+                                    <td>
+                                            <code>Paging</code>
+                                    </td>
+
+                                    <td>
+                                        Igen
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Visszatérési érték : </b>    <code>Observable&lt;IAllergyIntolerance[]&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAllergyIntolerancesByType"></a>
+                    <span class="name">
+                        <b>
+                            getAllergyIntolerancesByType
+                        </b>
+                        <a href="#getAllergyIntolerancesByType"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAllergyIntolerancesByType(type: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, orderBy?: OrderBy, paging?: Paging)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definíció helye: <a href="" data-line="48"
+                            class="link-to-prism">src/app/patient/details/services/allergy-intolerance.service.ts:48</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Paraméterek :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Név</td>
+                                    <td>Típus</td>
+                                    <td>Opcionális</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>type</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Nem
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>orderBy</td>
+                                    <td>
+                                            <code>OrderBy</code>
+                                    </td>
+
+                                    <td>
+                                        Igen
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>paging</td>
+                                    <td>
+                                            <code>Paging</code>
+                                    </td>
+
+                                    <td>
+                                        Igen
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Visszatérési érték : </b>    <code>Observable&lt;IAllergyIntolerance[]&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getById"></a>
+                    <span class="name">
+                        <b>
+                            getById
+                        </b>
+                        <a href="#getById"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getById(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definíció helye: <a href="" data-line="36"
+                            class="link-to-prism">src/app/patient/details/services/allergy-intolerance.service.ts:36</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Paraméterek :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Név</td>
+                                    <td>Típus</td>
+                                    <td>Opcionális</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Nem
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Visszatérési érték : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getByPatient"></a>
+                    <span class="name">
+                        <b>
+                            getByPatient
+                        </b>
+                        <a href="#getByPatient"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getByPatient(patient: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, orderBy?: OrderBy, paging?: Paging)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definíció helye: <a href="" data-line="40"
+                            class="link-to-prism">src/app/patient/details/services/allergy-intolerance.service.ts:40</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Paraméterek :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Név</td>
+                                    <td>Típus</td>
+                                    <td>Opcionális</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>patient</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Nem
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>orderBy</td>
+                                    <td>
+                                            <code>OrderBy</code>
+                                    </td>
+
+                                    <td>
+                                        Igen
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>paging</td>
+                                    <td>
+                                            <code>Paging</code>
+                                    </td>
+
+                                    <td>
+                                        Igen
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Visszatérési érték : </b>    <code>Observable&lt;IAllergyIntolerance[]&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="update"></a>
+                    <span class="name">
+                        <b>
+                            update
+                        </b>
+                        <a href="#update"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>update(data: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definíció helye: <a href="" data-line="28"
+                            class="link-to-prism">src/app/patient/details/services/allergy-intolerance.service.ts:28</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Paraméterek :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Név</td>
+                                    <td>Típus</td>
+                                    <td>Opcionális</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        Nem
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Visszatérési érték : </b>    <code>Promise&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+        <h3 id="inputs">
+            Tagváltozók
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="allergyIntoleranceApi"></a>
+                        <span class="name">
+                            <b>
+                            allergyIntoleranceApi</b>
+                            <a href="#allergyIntoleranceApi"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Típus : </i>    <code>AllergyIntoleranceApi</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definíció helye: <a href="" data-line="14" class="link-to-prism">src/app/patient/details/services/allergy-intolerance.service.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+import { AllergyIntoleranceApi } from &#x27;@inclouded/fhir-allergyintolerance&#x27;;
+import { AngularFirestore } from &#x27;@angular/fire/firestore&#x27;;
+import { OrderBy, Paging } from &#x27;@inclouded/fhirapi&#x27;;
+import { Observable } from &#x27;rxjs&#x27;;
+import { IAllergyIntolerance } from &#x27;@ahryman40k/ts-fhir-types/lib/R4&#x27;;
+import { TOUCH_BUFFER_MS } from &#x27;@angular/cdk/a11y&#x27;;
+
+@Injectable({
+  providedIn: &#x27;root&#x27;
+})
+export class AllergyIntoleranceService {
+
+  allergyIntoleranceApi: AllergyIntoleranceApi;
+
+  constructor(private afs: AngularFirestore) {
+    this.allergyIntoleranceApi &#x3D; new AllergyIntoleranceApi(this.afs);
+  }
+
+  getAll(paging?: Paging, orderBy?: OrderBy): any {
+    return this.allergyIntoleranceApi.getAll(paging, orderBy);
+  }
+
+  add(data: any, id?: string): Promise&lt;any&gt; {
+    return this.allergyIntoleranceApi.add(data, id);
+  }
+
+  update(data: any): Promise&lt;any&gt; {
+    return this.allergyIntoleranceApi.update(data);
+  }
+
+  delete(id: string): Promise&lt;void&gt; {
+    return this.allergyIntoleranceApi.delete(id);
+  }
+
+  getById(id: string): Observable&lt;any&gt; {
+    return this.allergyIntoleranceApi.getById(id);
+  }
+
+  getByPatient(patient: string, orderBy?: OrderBy, paging?: Paging): Observable&lt;IAllergyIntolerance[]&gt; {
+    return this.allergyIntoleranceApi.getAllergyIntolerancesByPatient(patient, orderBy, paging);
+  }
+
+  getAllergyIntolerancesByClinicalStatus(clinicalStatus: string, orderBy?: OrderBy, paging?: Paging): Observable&lt;IAllergyIntolerance[]&gt; {
+    return this.allergyIntoleranceApi.getAllergyIntolerancesByClinicalStatus(clinicalStatus, orderBy, paging);
+  }
+
+  getAllergyIntolerancesByType(type: string, orderBy?: OrderBy, paging?: Paging): Observable&lt;IAllergyIntolerance[]&gt; {
+    return this.allergyIntoleranceApi.getAllergyIntolerancesByType(type, orderBy, paging);
+  }
+
+  getAllergyIntolerancesByCategory(category: string, orderBy?: OrderBy, paging?: Paging): Observable&lt;IAllergyIntolerance[]&gt; {
+    return this.allergyIntoleranceApi.getAllergyIntolerancesByCategory(category, orderBy, paging);
+  }
+
+  getAllergyIntolerancesByCodeText(codeText: string, orderBy?: OrderBy, paging?: Paging): Observable&lt;IAllergyIntolerance[]&gt; {
+    return this.allergyIntoleranceApi.getAllergyIntolerancesByCodeText(codeText, orderBy, paging);
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">Nincs találat "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'AllergyIntoleranceService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

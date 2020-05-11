@@ -1,0 +1,996 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>web documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">web documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Keresendő kifejezés"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Komponensek</li>
+  <li>PatientAddPage</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/patient/add/patient-add.page.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implementált interfészek</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+    </p>
+
+
+<section>
+    <h3>Metaadatok</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-patient-add</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./patient-add.page.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./patient-add.page.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Tartalomjegyzék</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Tagváltozók</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#extraValidators">extraValidators</a>
+                            </li>
+                            <li>
+                                <a href="#getPatientRoute">getPatientRoute</a>
+                            </li>
+                            <li>
+                                <a href="#modalParameters">modalParameters</a>
+                            </li>
+                            <li>
+                                <a href="#patientAddSub">patientAddSub</a>
+                            </li>
+                            <li>
+                                <a href="#patientForUpdate">patientForUpdate</a>
+                            </li>
+                            <li>
+                                <a href="#title">title</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Metódusok</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getPatientFromRoute">getPatientFromRoute</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnDestroy">ngOnDestroy</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#save">save</a>
+                            </li>
+                            <li>
+                                <a href="#update">update</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Konstruktor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(patientService: <a href="../injectables/PatientService.html">PatientService</a>, loadingService: LoadingService, alertService: AlertService, toastService: ToastService, activatedRoute: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, prevRouteService: PrevRouteService)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Definíció helye: <a href="" data-line="33" class="link-to-prism">src/app/patient/add/patient-add.page.ts:33</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Paraméterek :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Név</td>
+                                                    <td>Típus</td>
+                                                <td>Opcionális</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>patientService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/PatientService.html" target="_self" >PatientService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            Nem
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>loadingService</td>
+                                                  
+                                                        <td>
+                                                                    <code>LoadingService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            Nem
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>alertService</td>
+                                                  
+                                                        <td>
+                                                                    <code>AlertService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            Nem
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>toastService</td>
+                                                  
+                                                        <td>
+                                                                    <code>ToastService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            Nem
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>activatedRoute</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            Nem
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            Nem
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>prevRouteService</td>
+                                                  
+                                                        <td>
+                                                                    <code>PrevRouteService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            Nem
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Metódusok
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPatientFromRoute"></a>
+                    <span class="name">
+                        <b>
+                            getPatientFromRoute
+                        </b>
+                        <a href="#getPatientFromRoute"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getPatientFromRoute()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definíció helye: <a href="" data-line="56"
+                            class="link-to-prism">src/app/patient/add/patient-add.page.ts:56</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Visszatérési érték : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnDestroy"></a>
+                    <span class="name">
+                        <b>
+                            ngOnDestroy
+                        </b>
+                        <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definíció helye: <a href="" data-line="46"
+                            class="link-to-prism">src/app/patient/add/patient-add.page.ts:46</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Visszatérési érték : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definíció helye: <a href="" data-line="42"
+                            class="link-to-prism">src/app/patient/add/patient-add.page.ts:42</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Visszatérési érték : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="save"></a>
+                    <span class="name">
+                        <b>
+                            save
+                        </b>
+                        <a href="#save"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>save(patient: IPatient)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definíció helye: <a href="" data-line="69"
+                            class="link-to-prism">src/app/patient/add/patient-add.page.ts:69</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Paraméterek :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Név</td>
+                                    <td>Típus</td>
+                                    <td>Opcionális</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>patient</td>
+                                    <td>
+                                            <code>IPatient</code>
+                                    </td>
+
+                                    <td>
+                                        Nem
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Visszatérési érték : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="update"></a>
+                    <span class="name">
+                        <b>
+                            update
+                        </b>
+                        <a href="#update"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>update(patient: IPatient)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definíció helye: <a href="" data-line="81"
+                            class="link-to-prism">src/app/patient/add/patient-add.page.ts:81</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Paraméterek :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Név</td>
+                                    <td>Típus</td>
+                                    <td>Opcionális</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>patient</td>
+                                    <td>
+                                            <code>IPatient</code>
+                                    </td>
+
+                                    <td>
+                                        Nem
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Visszatérési érték : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Tagváltozók
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="extraValidators"></a>
+                        <span class="name">
+                            <b>
+                            extraValidators</b>
+                            <a href="#extraValidators"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Típus : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Alapértelmezett érték : </i><code>{
+    contact: [Validators.required]
+  }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definíció helye: <a href="" data-line="23" class="link-to-prism">src/app/patient/add/patient-add.page.ts:23</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getPatientRoute"></a>
+                        <span class="name">
+                            <b>
+                            getPatientRoute</b>
+                            <a href="#getPatientRoute"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Típus : </i>    <code>Subscription</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definíció helye: <a href="" data-line="20" class="link-to-prism">src/app/patient/add/patient-add.page.ts:20</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="modalParameters"></a>
+                        <span class="name">
+                            <b>
+                            modalParameters</b>
+                            <a href="#modalParameters"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Típus : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Alapértelmezett érték : </i><code>{
+    contact: {
+      name: [Validators.required],
+      email: [Validators.required, Validators.pattern(EMAIL_REGEX)],
+      phone: [Validators.required, Validators.pattern(PHONE_REGEX)]
+    }
+  }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definíció helye: <a href="" data-line="27" class="link-to-prism">src/app/patient/add/patient-add.page.ts:27</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="patientAddSub"></a>
+                        <span class="name">
+                            <b>
+                            patientAddSub</b>
+                            <a href="#patientAddSub"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Típus : </i>    <code>Subscription</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definíció helye: <a href="" data-line="19" class="link-to-prism">src/app/patient/add/patient-add.page.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="patientForUpdate"></a>
+                        <span class="name">
+                            <b>
+                            patientForUpdate</b>
+                            <a href="#patientForUpdate"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Típus : </i>    <code>IPatient</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definíció helye: <a href="" data-line="21" class="link-to-prism">src/app/patient/add/patient-add.page.ts:21</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="title"></a>
+                        <span class="name">
+                            <b>
+                            title</b>
+                            <a href="#title"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Típus : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Alapértelmezett érték : </i><code>&#x27;ADD_PATIENT&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definíció helye: <a href="" data-line="18" class="link-to-prism">src/app/patient/add/patient-add.page.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnDestroy, OnInit } from &#x27;@angular/core&#x27;;
+import { Subscription } from &#x27;rxjs&#x27;;
+import { IPatient } from &#x27;@ahryman40k/ts-fhir-types/lib/R4&#x27;;
+import { ActivatedRoute, Router } from &#x27;@angular/router&#x27;;
+import {
+  ToastService, LoadingService, AlertService,
+  EMAIL_REGEX, PHONE_REGEX, PrevRouteService
+} from &#x27;@inclouded/ionic4-inclouded-lib&#x27;;
+import { PatientService } from &#x27;src/app/shared/services/patient.service&#x27;;
+import { Validators } from &#x27;@angular/forms&#x27;;
+
+@Component({
+  selector: &#x27;app-patient-add&#x27;,
+  templateUrl: &#x27;./patient-add.page.html&#x27;,
+  styleUrls: [&#x27;./patient-add.page.scss&#x27;],
+})
+export class PatientAddPage implements OnInit, OnDestroy {
+  title &#x3D; &#x27;ADD_PATIENT&#x27;;
+  patientAddSub: Subscription;
+  getPatientRoute: Subscription;
+  patientForUpdate: IPatient;
+
+  extraValidators &#x3D; {
+    contact: [Validators.required]
+  };
+
+  modalParameters &#x3D; {
+    contact: {
+      name: [Validators.required],
+      email: [Validators.required, Validators.pattern(EMAIL_REGEX)],
+      phone: [Validators.required, Validators.pattern(PHONE_REGEX)]
+    }
+  };
+
+  constructor(
+    private patientService: PatientService, private loadingService: LoadingService,
+    private alertService: AlertService, private toastService: ToastService,
+    private activatedRoute: ActivatedRoute, private router: Router,
+    private prevRouteService: PrevRouteService
+  ) { }
+
+  ngOnInit() {
+    this.getPatientFromRoute();
+  }
+
+  ngOnDestroy(): void {
+    if (this.patientAddSub) {
+      this.patientAddSub.unsubscribe();
+    }
+    if (this.getPatientRoute) {
+      this.getPatientRoute.unsubscribe();
+    }
+    localStorage.removeItem(&#x27;patient&#x27;);
+  }
+
+  getPatientFromRoute() {
+    this.getPatientRoute &#x3D; this.activatedRoute.paramMap.subscribe(() &#x3D;&gt; {
+      const patient: IPatient &#x3D; window.history.state.parameter;
+      if (patient) {
+        localStorage.setItem(&#x27;patient&#x27;, JSON.stringify(patient));
+      }
+      this.patientForUpdate &#x3D; JSON.parse(localStorage.getItem(&#x27;patient&#x27;));
+      if (this.patientForUpdate) {
+        this.title &#x3D; &#x27;MODIFICATION_PATIENT&#x27;;
+      }
+    });
+  }
+
+  save(patient: IPatient) {
+    this.loadingService.presentLoading(&#x27;ADD_PATIENT&#x27;);
+    this.patientService.add(patient).then(
+      () &#x3D;&gt; {
+        this.toastService.presentToast(&#x27;ADD_PATIENT_SUCCESS&#x27;);
+      }, () &#x3D;&gt; {
+        this.alertService.presentError(&#x27;ADD_PATIENT_UNSUCCESSFULL&#x27;);
+      }).finally(() &#x3D;&gt; {
+        this.loadingService.dismissLoading();
+      });
+  }
+
+  update(patient: IPatient) {
+    this.loadingService.presentLoading(&#x27;MODIFICATION_PATIENT&#x27;);
+    this.patientService.update(patient).then(
+      () &#x3D;&gt; {
+        localStorage.setItem(&#x27;patient&#x27;, JSON.stringify(patient));
+        this.toastService.presentToast(&#x27;UPDATE_PATIENT_SUCCESS&#x27;);
+        console.log(&#x27;this.prevRouteService.getPreviousUrl(): &#x27;, this.prevRouteService.getPreviousUrl());
+        this.router.navigateByUrl(this.prevRouteService.getPreviousUrl());
+      }, () &#x3D;&gt; {
+        this.alertService.presentError(&#x27;UPDATE_PATIENT_UNSUCCESSFULL&#x27;);
+      }).finally(() &#x3D;&gt; {
+        this.loadingService.dismissLoading();
+      });
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;inc-toolbar defHref&#x3D;&quot;/main/patient-list&quot;&gt;&lt;/inc-toolbar&gt;
+
+&lt;ion-content&gt;
+  &lt;ion-toolbar color&#x3D;&quot;primary&quot;&gt;
+    &lt;ion-title&gt;{{title | translate}}&lt;/ion-title&gt;
+  &lt;/ion-toolbar&gt;
+  &lt;inc-container&gt;
+    &lt;ion-card no-margin&gt;
+      &lt;ion-text color&#x3D;&quot;primary&quot; text-uppercase padding style&#x3D;&quot;padding-bottom: 0;&quot;&gt;
+        &lt;b&gt;{{&#x27;MASTER_DATAS&#x27; | translate}}&lt;/b&gt;
+      &lt;/ion-text&gt;
+      &lt;inc-patient-add [inData]&#x3D;&quot;patientForUpdate&quot; [extraValidators]&#x3D;&quot;extraValidators&quot;
+        [modalParameters]&#x3D;&quot;modalParameters&quot; (callUpdate)&#x3D;&#x27;update($event)&#x27; (callSave)&#x3D;&#x27;save($event)&#x27;&gt;
+      &lt;/inc-patient-add&gt;
+    &lt;/ion-card&gt;
+  &lt;/inc-container&gt;
+&lt;/ion-content&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./patient-add.page.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">ion-text {
+    display: block;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Jelmagyarázat</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html elem</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Komponens</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html elem direktívával</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><inc-toolbar defHref="/main/patient-list"></inc-toolbar><ion-content>  <ion-toolbar color="primary">    <ion-title>{{title | translate}}</ion-title>  </ion-toolbar>  <inc-container>    <ion-card no-margin>      <ion-text color="primary" text-uppercase padding style="padding-bottom: 0;">        <b>{{\'MASTER_DATAS\' | translate}}</b>      </ion-text>      <inc-patient-add [inData]="patientForUpdate" [extraValidators]="extraValidators"        [modalParameters]="modalParameters" (callUpdate)=\'update($event)\' (callSave)=\'save($event)\'>      </inc-patient-add>    </ion-card>  </inc-container></ion-content></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppointmentModalComponent', 'selector': 'app-appointment-modal'},{'name': 'CareComponent', 'selector': 'app-care'},{'name': 'CarePlanAddModalComponent', 'selector': 'app-care-plan-add-modal'},{'name': 'ConditionModalComponent', 'selector': 'app-condition-modal'},{'name': 'DecourseAddModalComponent', 'selector': 'app-decourse-add-modal'},{'name': 'DecourseComponent', 'selector': 'app-decourse'},{'name': 'DetectionPageComponent', 'selector': 'app-detection-page'},{'name': 'DeviceAddPage', 'selector': 'app-device-add'},{'name': 'DeviceDetailsPage', 'selector': 'app-device-details'},{'name': 'DeviceListPage', 'selector': 'app-device-list'},{'name': 'GoalAddModalComponent', 'selector': 'app-goal-add-modal'},{'name': 'MainPage', 'selector': 'app-main'},{'name': 'MedicalChartComponent', 'selector': 'app-medical-chart'},{'name': 'MedicationModalComponent', 'selector': 'app-medication-modal'},{'name': 'ObservationListPage', 'selector': 'app-observation-list'},{'name': 'OdAddModalComponent', 'selector': 'app-od-add-modal'},{'name': 'PatientAddPage', 'selector': 'app-patient-add'},{'name': 'PatientDetailsPage', 'selector': 'app-patient-details'},{'name': 'PatientListPage', 'selector': 'app-patient-list'},{'name': 'ProfilePage', 'selector': 'app-profile'},{'name': 'RequestModalComponent', 'selector': 'app-request-modal'},{'name': 'SettingsPage', 'selector': 'app-settings'},{'name': 'SleepChartComponent', 'selector': 'app-sleep-chart'},{'name': 'SleepChartComponent', 'selector': 'app-sleep-chart'},{'name': 'SleepPage', 'selector': 'app-sleep'},{'name': 'SpecificDatasComponent', 'selector': 'app-specific-datas'},{'name': 'TakedMedicationModalComponent', 'selector': 'app-taked-medication-modal'}];
+    var DIRECTIVES = [{'name': 'GinaControllerDirective', 'selector': '[GinaController]'}];
+    var ACTUAL_COMPONENT = {'name': 'PatientAddPage'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">Nincs találat "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'PatientAddPage.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
